@@ -1,27 +1,22 @@
 /* Variables for easy customization */
 :root {
     --background-color: #ffffff;
-    --title-font-size: 2rem;
-    --title-color: #000000;
-    --title-font-family: Arial, sans-serif;
+    --text-color: #000000;
     --section-white: #ffffff;
     --section-black: #000000;
     --section-padding: 2rem;
-    --header-background: #ffffff;
-    --header-text-color: #000000;
 }
 
-/* General body styling */
 body {
     background-color: var(--background-color);
     margin: 0;
-    font-family: var(--title-font-family);
+    font-family: "Merriweather Sans", sans-serif;
 }
 
 /* Header styling */
 header {
-    background-color: var(--header-background);
-    color: var(--header-text-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
     position: sticky;
     top: 0;
     display: flex;
@@ -36,17 +31,18 @@ header {
 
 header nav a {
     text-decoration: none;
-    color: var(--header-text-color);
+    color: var(--text-color);
     margin: 0 1rem;
     font-size: 1rem;
 }
 
+
 /* Title text */
 .title {
-    font-size: var(--title-font-size);
-    color: var(--title-color);
+    font-size: 2em;
+    color: var(--text-color);
     text-align: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
     transition: color 0.3s ease;
 
     font-family: "Libre Baskerville", serif;
@@ -59,13 +55,11 @@ header nav a {
 /* Learn more link */
 .learn-more {
     text-align: center;
-    margin-top: 1rem;
     font-size: 1.2rem;
     text-decoration: none;
-    color: var(--title-color);
+    color: var(--text-color);
     align-self: center;
 
-    font-family: "Merriweather Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -133,9 +127,83 @@ section, div {
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
-    :root {
-        --title-font-size: 3rem;
+header {
+    transition: transform 0.3s ease-in-out; /* Smooth sliding effect */
+}
+
+.wgi-logo-black, .dci-logo-white {
+    width: 50%;
+    justify-self: center;
+}
+
+
+
+
+/* ############################################
+###############################################
+############################################ */
+/* grids and layout */
+/* .about-DCI {
+    margin: 150px 0px;
+} */
+
+.about-DCI > div {
+    display: grid;
+    grid-template-rows: 5;
+    grid-template-columns: 2;
+    justify-items: center;
+}
+
+.about-DCI > div > * {
+    align-self: center;
+}
+
+
+
+
+
+/* ############################################
+###############################################
+############################################ */
+/* mobile styles */
+body {
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+h3 {
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+    margin-top: 2em;
+}
+
+
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+
+
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+
+
+/* desktop styles */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 22px;
     }
 }

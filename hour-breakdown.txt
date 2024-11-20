@@ -1,0 +1,2 @@
+11/19/24 - 50m - Made initial HTML and CSS files
+11/20/24 - 50m - Worked on CSS styling and building the homepage up

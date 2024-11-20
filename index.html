@@ -31,17 +31,16 @@
         <main>
             <div class="title-container">
                 <h1 class="title" id="rotating">What is Drum Corps?</h1>
-                <a class="learn-more" href="#about-WGI">Learn About It ↓</a>
+                <a class="learn-more" href="#about-WGI">Get your questions answered ↓</a>
             </div>
 
             <!-- Section 1: About WGI -->
-            <section class="about-WGI">
-                <img src="https://via.placeholder.com/600x400" alt="Placeholder image" />
+            <section id="about-WGI" class="about-WGI">
+                <img class="wgi-logo-black" src="images/logos/wgi-logo-black.svg" alt="WGI sport of the arts logo" />
                 <div>
                     <h2>About WGI</h2>
                     <p>
-                        Placeholder text for About WGI section. This section provides
-                        details about WGI.
+                        WGI Sport of the Arts is the world’s premier organization producing indoor color guard, percussion, and winds competitions.  As a non-profit youth organization, WGI also serves as the governing body for the indoor color guard, percussion, and winds activities. It is called the Sport of the Arts because it brings music to life through performance in a competitive format. Even with over 45 years of history, the sport continues to evolve and grow. There were more than 40,000 participants at the regional level, and more than 12,000 participants at the Sport of the Arts World Championships this past April.
                     </p>
                     <h3>Video 1 Title</h3>
                     <iframe
@@ -60,23 +59,29 @@
 
             <!-- Section 2: About DCI -->
             <section class="about-DCI">
-                <img src="https://via.placeholder.com/600x400" alt="Placeholder image" />
+                <img class="dci-logo-white" src="images/logos/dci-logo-white.svg" alt="DCI logo"/>
                 <div>
                     <h2>About DCI</h2>
                     <p>
                         Placeholder text for About DCI section. This section provides
                         details about DCI.
                     </p>
-                    <h3>Video 1 Title</h3>
-                    <iframe
-                        src="https://www.youtube.com/embed/PLACEHOLDER"
-                        title="Video 1"
+                    <h3>The Blue Devils 2019 - Victory Run (Ghostlight)</h3>
+                    <iframe class="dci-vid-1"
+                        src="https://www.youtube.com/embed/nZFfXIxF4mw?si=rQt79vzOPjEL40jz"
+                        title='The Blue Devils 2019 - Victory Run (Ghostlight)'
                         allowfullscreen
                     ></iframe>
-                    <h3>Video 2 Title</h3>
-                    <iframe
-                        src="https://www.youtube.com/embed/PLACEHOLDER"
-                        title="Video 2"
+                    <h3>Phantom Regiment 2010 - Edited With Judge Tape</h3>
+                    <iframe class="dci-vid-2"
+                        src="https://www.youtube.com/embed/-a66_r8QDWE?si=H7TKzd3S0-acLwnw"
+                        title="Phantom Regiment 2010 - Edited With Judge Tape"
+                        allowfullscreen
+                    ></iframe>
+                    <h3>Carolina Crown 2019 Full Show - Learn The Beats</h3>
+                    <iframe class="dci-vid-3"
+                        src="https://www.youtube.com/embed/wceegwk_VAU?si=2moj0Y5q0_oF0f_V"
+                        title="Carolina Crown 2019 Full Show Finals (Full Battery Score) - Learn The Beats"
                         allowfullscreen
                     ></iframe>
                 </div>
@@ -163,6 +168,8 @@
                 titleElement.textContent = titleTexts[currentIndex];
             }, 2000);
 
+
+
             // Carousel Functionality
             const carouselImages = [
                 "https://via.placeholder.com/300x200",
@@ -176,6 +183,28 @@
                 carouselIndex = (carouselIndex + 1) % carouselImages.length;
                 carouselElement.src = carouselImages[carouselIndex];
             }, 5000);
+
+
+
+            // Select the header element
+            const header = document.querySelector('header');
+
+            // Set up the initial state
+            header.style.transform = 'translateY(-100%)'; // Initially hidden above the viewport
+            header.style.position = 'fixed';
+            header.style.top = '0';
+            header.style.width = '100%';
+            header.style.zIndex = '1000'; // Ensure it stays on top
+
+            // Event listener for scroll
+            window.addEventListener('scroll', () => {
+                const scrollThreshold = window.innerHeight * 0.25; // 150% of the viewport height
+                if (window.scrollY > scrollThreshold) {
+                    header.style.transform = 'translateY(0)'; // Slide in
+                } else {
+                    header.style.transform = 'translateY(-100%)'; // Slide out
+                }
+            });
         </script>
     </body>
 </html>

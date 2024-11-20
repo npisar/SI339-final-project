@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Index</title>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="style.css">
+        
+        <!-- Google font -->
+        <!-- Libre Baskerville -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <!-- Merriweather Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#">Placeholder 1</a>
+                <a href="#">Placeholder 2</a>
+                <a href="#">Placeholder 3</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="title-container">
+                <h1 class="title" id="rotating">What is Drum Corps?</h1>
+                <a class="learn-more" href="#about-WGI">Learn About It ↓</a>
+            </div>
+
+            <!-- Section 1: About WGI -->
+            <section class="about-WGI">
+                <img src="https://via.placeholder.com/600x400" alt="Placeholder image" />
+                <div>
+                    <h2>About WGI</h2>
+                    <p>
+                        Placeholder text for About WGI section. This section provides
+                        details about WGI.
+                    </p>
+                    <h3>Video 1 Title</h3>
+                    <iframe
+                        src="https://www.youtube.com/embed/PLACEHOLDER"
+                        title="Video 1"
+                        allowfullscreen
+                    ></iframe>
+                    <h3>Video 2 Title</h3>
+                    <iframe
+                        src="https://www.youtube.com/embed/PLACEHOLDER"
+                        title="Video 2"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </section>
+
+            <!-- Section 2: About DCI -->
+            <section class="about-DCI">
+                <img src="https://via.placeholder.com/600x400" alt="Placeholder image" />
+                <div>
+                    <h2>About DCI</h2>
+                    <p>
+                        Placeholder text for About DCI section. This section provides
+                        details about DCI.
+                    </p>
+                    <h3>Video 1 Title</h3>
+                    <iframe
+                        src="https://www.youtube.com/embed/PLACEHOLDER"
+                        title="Video 1"
+                        allowfullscreen
+                    ></iframe>
+                    <h3>Video 2 Title</h3>
+                    <iframe
+                        src="https://www.youtube.com/embed/PLACEHOLDER"
+                        title="Video 2"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </section>
+
+            <!-- Section 3: How I Started -->
+            <section class="how-I-started">
+                <div>
+                    <h2>How I Started</h2>
+                    <p>
+                        Placeholder story text for how I started drumming. This section
+                        shares my journey and experiences.
+                    </p>
+                </div>
+                <div class="carousel">
+                    <img src="https://via.placeholder.com/300x200" alt="Carousel image 1" />
+                </div>
+            </section>
+
+            <!-- Section 4: Why I Do It -->
+            <section class="why-I-do-it" >
+                <div>
+                    <h2>Why I Do It</h2>
+                    <p>
+                        Placeholder text explaining my motivation and passion for
+                        drumming.
+                    </p>
+                    <h3>Video 1 Title</h3>
+                    <iframe
+                        src="https://www.youtube.com/embed/PLACEHOLDER"
+                        title="Video 1"
+                        allowfullscreen
+                    ></iframe>
+                    <h3>Video 2 Title</h3>
+                    <iframe
+                        src="https://www.youtube.com/embed/PLACEHOLDER"
+                        title="Video 2"
+                        allowfullscreen
+                    ></iframe>
+                    <h3>Video 3 Title</h3>
+                    <iframe
+                        src="https://www.youtube.com/embed/PLACEHOLDER"
+                        title="Video 3"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </section>
+
+            <!-- Section 5: Other Drumming -->
+            <section class="other-drumming">
+                <div>
+                    <h2>Other Drumming</h2>
+                    <p>
+                        Placeholder text for other drumming activities and experiences.
+                    </p>
+                </div>
+                <div class="carousel">
+                    <img src="https://via.placeholder.com/300x200" alt="Carousel image 1" />
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Footer with placeholder links:</p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> |
+            <a href="#">Contact Us</a>
+        </footer>
+
+        <script>
+            // Title Text Rotator
+            const titleTexts = [
+                "What is Drum Corps?",
+                "What is Indoor Percussion?",
+                "Do you get paid to do it?",
+                "How much does it cost?",
+                "How much time do you spend?",
+                "Do you ever stop drumming?",
+            ];
+            let currentIndex = 0;
+            const titleElement = document.getElementById("rotating");
+
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % titleTexts.length;
+                titleElement.textContent = titleTexts[currentIndex];
+            }, 2000);
+
+            // Carousel Functionality
+            const carouselImages = [
+                "https://via.placeholder.com/300x200",
+                "https://via.placeholder.com/300x200",
+                "https://via.placeholder.com/300x200",
+            ];
+            let carouselIndex = 0;
+            const carouselElement = document.querySelector(".carousel img");
+
+            setInterval(() => {
+                carouselIndex = (carouselIndex + 1) % carouselImages.length;
+                carouselElement.src = carouselImages[carouselIndex];
+            }, 5000);
+        </script>
+    </body>
+</html>

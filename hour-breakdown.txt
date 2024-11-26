@@ -1,2 +1,4 @@
 11/19/24 - 50m - Made initial HTML and CSS files
 11/20/24 - 50m - Worked on CSS styling and building the homepage up
+
+11/25/24 - 30m - Worked on writing descriptions about DCI and WGI

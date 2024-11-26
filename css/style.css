@@ -73,7 +73,6 @@ html {
 
 /* Section-specific styling */
 section {
-    padding: 2rem;
     display: grid;
     gap: 1rem;
 }
@@ -117,6 +116,15 @@ section, div {
 .why-I-do-it {
     background-color: var(--section-black);
     color: var(--section-white);
+}
+
+.youtube-video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+.wrapper {
+    justify-self: center;
 }
 
 /* Carousel image styling */
@@ -229,6 +237,9 @@ header {
 
 
 
+.about-WGI * {
+    outline: 5px solid red;
+}
 
 .about-WGI > div {
     justify-items: left;
@@ -236,14 +247,15 @@ header {
 
 .about-WGI > div > img {
     justify-self: center;
+    width: 100%;
+}
+
+.about-WGI > div > iframe {
+    justify-self: center;
 }
 
 .about-WGI > div > li {
-    width: 90%;
-}
-
-.about-WGI > img {
-    max-width: 60%;
+    max-width: 90%;
 }
 
 .about-WGI > p {
@@ -319,12 +331,22 @@ header nav a {
     font-size: 1.2rem;
 }
 
+section {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 
 
 /* small tablet styles */
 @media screen and (min-width: 620px) {
     body {
         font-size: 16px;
+    }
+
+    section {
+        padding-left: 20%;
+        padding-right: 20%;
     }
 }
 
@@ -334,6 +356,11 @@ header nav a {
 @media screen and (min-width: 960px) {
     body {
         font-size: 20px;
+    }
+
+    section {
+        padding-left: 20%;
+        padding-right: 20%;
     }
 }
 

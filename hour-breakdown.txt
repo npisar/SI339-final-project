@@ -2,3 +2,5 @@
 11/20/24 - 50m - Worked on CSS styling and building the homepage up
 
 11/25/24 - 30m - Worked on writing descriptions about DCI and WGI
+11/25/24 - 240m - Tons of work on the homepage
+11/25/24 - 90m - Changed page structure and put all information about each actvity into separate pages

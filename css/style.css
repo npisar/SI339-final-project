@@ -45,10 +45,6 @@ h1, h2, h3, h4 {
     font-style: normal;
 }
 
-h1 > em, h2 > em, h3 > em, h4 > em {
-    font-style: italic;
-}
-
 h2 {
     align-self: center;
 }
@@ -148,7 +144,7 @@ header {
 ############################################ */
 /* grids and layout */
 
-.intro-to-my-drumming {
+.general-drum-information {
     justify-items: center;
 }
 
@@ -231,20 +227,39 @@ header {
     height: 80%;
 }
 
+
+
+
 .about-WGI > div {
-    justify-items: center;
+    justify-items: left;
+}
+
+.about-WGI > div > img {
+    justify-self: center;
 }
 
 .about-WGI > div > li {
     width: 90%;
 }
 
+.about-WGI > img {
+    max-width: 60%;
+}
+
+.about-WGI > p {
+    text-align: left;
+    width: 100%;
+}
 
 
 
 .about-DCI {
     padding-top: 90px;
     padding-bottom: 90px;
+}
+
+.about-DCI > img {
+    max-width: 60%;
 }
 
 .about-DCI > div {
@@ -328,5 +343,10 @@ header nav a {
 @media screen and (min-width: 1200px) {
     body {
         font-size: 22px;
+    }
+    
+    section {
+        padding-left: 20%;
+        padding-right: 20%;
     }
 }

@@ -4,3 +4,5 @@
 11/25/24 - 30m - Worked on writing descriptions about DCI and WGI
 11/25/24 - 240m - Tons of work on the homepage
 11/25/24 - 90m - Changed page structure and put all information about each actvity into separate pages
+
+11/26/24 - 360m - lots of content additions and html / css work. added js elements too and took dark / light mode toggle from CPD4

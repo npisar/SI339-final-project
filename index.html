@@ -7,6 +7,12 @@
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/style.css">
         
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="images/favicons/site.webmanifest">
+
         <!-- Google font -->
         <!-- Libre Baskerville -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,17 +23,92 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <!-- lightbox -->
+        <link href="lightbox2-2.11.5\dist\css\lightbox.css" rel="stylesheet" />
+
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="https://kit.fontawesome.com/c6dd4f98de.js" crossorigin="anonymous"></script>
     </head>
+
     <body>
         <header>
             <nav>
                 <a href="index.html">Home</a>
                 <br>
                 <a href="about-wgi.html">About WGI</a>
+                |
                 <a href="#">WGI Experience</a>
+                |
                 <a href="about-dci.html">About DCI</a>
+                |
                 <a href="#">DCI Experience</a>
+                |
             </nav>
+
+            <button class="color-scheme-toggle" onclick="colorSchemeToggle()" tabindex="4">Color Scheme Toggle</button>
+    
+                <script>
+                    let previousColorScheme = 'dark-mode'; // Variable to remember the previous color scheme
+        
+                    function colorSchemeToggle() {
+                        const body = document.body;
+                        const colorSchemeToggleButton = document.querySelector(".color-scheme-toggle");
+        
+                        // If high contrast mode is active, switch to the opposite scheme directly
+                        if (body.classList.contains("high-contrast-mode")) {
+                            body.classList.remove("high-contrast-mode");
+        
+                            // Switch to the opposite scheme of the current remembered scheme
+                            if (previousColorScheme === 'dark-mode') {
+                                body.classList.remove("dark-mode");
+                                body.classList.add("light-mode");
+                                colorSchemeToggleButton.innerHTML = 'Dark Mode<i class="fa-solid fa-moon"></i>';
+                                document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-black.svg';
+                                previousColorScheme = 'light-mode';
+                            } else {
+                                body.classList.remove("light-mode");
+                                body.classList.add("dark-mode");
+                                colorSchemeToggleButton.innerHTML = 'Light Mode<i class="fa-solid fa-sun"></i>';
+                                document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-white.svg';
+                                previousColorScheme = 'dark-mode';
+                            }
+                        } else {
+                            // Toggle between dark mode and light mode
+                            if (body.classList.contains("dark-mode")) {
+                                body.classList.remove("dark-mode");
+                                body.classList.add("light-mode");
+                                colorSchemeToggleButton.innerHTML = 'Dark Mode<i class="fa-solid fa-moon"></i>';
+                                document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-black.svg';
+                            } else {
+                                body.classList.remove("light-mode");
+                                body.classList.add("dark-mode");
+                                colorSchemeToggleButton.innerHTML = 'Light Mode<i class="fa-solid fa-sun"></i>';
+                                document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-white.svg';
+                            }
+        
+                            // Update previous color scheme to reflect current state
+                            previousColorScheme = body.classList.contains("dark-mode") ? 'dark-mode' : 'light-mode';
+                        }
+                    }
+                
+                    // Automatically set color scheme based on user preference
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+                
+                        // Initial mode setup based on preference
+                        if (prefersDarkScheme.matches) {
+                            document.body.classList.add("dark-mode");
+                            document.querySelector(".color-scheme-toggle").innerHTML = 'Light Mode<i class="fa-solid fa-sun"></i>';
+                            document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-white.svg';
+                        } else {
+                            document.body.classList.add("light-mode");
+                            document.querySelector(".color-scheme-toggle").innerHTML = 'Dark Mode<i class="fa-solid fa-moon"></i>';
+                            document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-black.svg';
+                        }
+                    });
+                </script>
         </header>
 
         <main>
@@ -40,48 +121,97 @@
                 <h2>"Tell me about that <em>drum thing</em> you do"</h2>
                 
                 <div class="collage">
-                    <img src="images\photos\image1.png" id=image1 alt="performing with WGI group MidMichigan Impact from 2022">
-                    <img src="images\photos\image2.png" id="image2" alt="warming up with DCI group River City Rhythm from 2023">
-                    <img src="images\photos\image3.png" id="image3" alt="performing with WGI group Motor City Percussion from 2023">
-                    <img src="images\photos\image4.png" id="image4" alt="Motor City Percussion snareline with Michigan Alliance for Performing Arts Percussion Independent Open Champions banner from 2024">
-                    <img src="images\photos\image5.png" id="image5" alt="River City Rhythm 2024 snareline">
-                    <img src="images\photos\image6.png" id="image6" alt="Motor City Percussion 2023 snareline">
-                    <img src="images\photos\image7.png" id="image7" alt="Motor City Percussion 2024 snareline">
-                    <img src="images\photos\image8.png" id="image8" alt="Motor City Percussion members posing in front of River City Rhythm truck from 2024">
-                    <img src="images\photos\image10.png" id="image9" alt="River City Rhythm 2024 battery in a circle, hands extended">
-                    <img src="images\photos\image11.png" id="image10" alt="performing with Motor City Percussion from 2024">
+                    <img src="images\photos\index\image1.png" id=image1 alt="performing with WGI group MidMichigan Impact from 2022">
+                    <img src="images\photos\index\image2.png" id="image2" alt="warming up with DCI group River City Rhythm from 2023">
+                    <img src="images\photos\index\image3.png" id="image3" alt="performing with WGI group Motor City Percussion from 2023">
+                    <img src="images\photos\index\image4.png" id="image4" alt="Motor City Percussion snareline with Michigan Alliance for Performing Arts Percussion Independent Open Champions banner from 2024">
+                    <img src="images\photos\index\image5.png" id="image5" alt="River City Rhythm 2024 snareline">
+                    <img src="images\photos\index\image6.png" id="image6" alt="Motor City Percussion 2023 snareline">
+                    <img src="images\photos\index\image7.png" id="image7" alt="Motor City Percussion 2024 snareline">
+                    <img src="images\photos\index\image8.png" id="image8" alt="Motor City Percussion members posing in front of River City Rhythm truck from 2024">
+                    <img src="images\photos\index\image10.png" id="image9" alt="River City Rhythm 2024 battery in a circle, hands extended">
+                    <img src="images\photos\index\image11.png" id="image10" alt="performing with Motor City Percussion from 2024">
                 </div>
                 
                 <h2>It's really pretty simple.</h2>
                 <p>
                     I've loved playing the snare drum since 5th grade, and specifically the marching snare drum since 7th grade. I've taken that passion to an extreme most people don't know exists.
                     <br><br>
-                    During the summer and winter, I rehearse and perform with <a href="#about-WGI">Winter Guard International (WGI)</a> and <a href="#about-DCI">Drum Corps International (DCI)</a> ensembles, respectively. In short, those are governing bodies that organize professional marching bands or indoor drumline ensembles scattered around the country.
+                    During the winter and summer, I rehearse and perform with <a href="#about-WGI">Winter Guard International (WGI)</a> and <a href="#about-DCI">Drum Corps International (DCI)</a> ensembles, respectively. In short, those are governing bodies that organize professional marching bands or indoor drumline ensembles scattered around the country.
                     <br><br>
-                    Scroll down or click on the names of either activity in the previous paragraph to learn more about each.
+                    Keep reading to learn about how I got involved with each activity, or click on one of the links in the header to learn about how each works and what my experiences with them are.
                     <br><br>
-
                 </p>
 
             </section>
 
 
             <!-- Section 3: How I Started -->
+            <h2>How I Started Marching Drumming</h2>
             <section class="how-I-started">
-                <div>
-                    <h2>How I Started</h2>
-                    <p>
-                        Placeholder story text for how I started drumming. This section
-                        shares my journey and experiences.
-                    </p>
+                <p id="HIS-1">
+                    Before I experienced anything musical through my schools, my parents enrolled me in piano lessons. That was really key for me-it got me involved with and excited about music super early on in my life. I took those lessons and got other general music lessons in elementary school until I eventually became old enough to choose an instrument for 5th grade band class. I started with a bell kit and small drumpad.
+                </p>
+                <p>
+                    As I continued in band class throughout middle school, I remember seeing a drum cam video by an alumni of my high school. He was playing through the school cadence series marching into the stadium, and I thought it was the coolest thing in the world. 
+                </p>
+                    <div class="wrapper">
+                        <iframe src="https://www.youtube.com/embed/GMnLTxPDusg?si=wJOtmhojsNjMnSFw"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
                 </div>
-                <div class="carousel">
-                    <img src="https://via.placeholder.com/300x200" alt="Carousel image 1" />
+                <p id="HIS-2">
+                    <em>"I want to do that,"</em> I remember thinking to myself. I started taking lessons with an instructor local to my area around the beginning of my eighth grade year. I worked extremely hard with him, probably harder than I had ever worked at something in my life. I wanted to make snare drum in the Dow High Drumline, and there were a lot of veteran members. I don't know what made me so interested in snare drum specifically; maybe it was the strange "traditional grip" used in the left hand, maybe it was that they were a always present high voice in the drumline sound. Regardless, after months of lessons and tons of hard work, it was time for the audition. And I got it! I made the snare line. I was also the only freshman to do so. You could say I felt pretty good about it, and I was definitely a little too cocky about it, especially considering what I know now about marching snare drumming!
+                </p>
+                <div class="wrapper" id="HIS-3">
+                    <figure>
+                        <a href="images\photos\index\dowhigh2019markup.png" data-lightbox="index-photos" data-title='There I am! My first year playing in a marching ensemble! | Dow High School at Marching Band Showcase | October 16, 2019' data-alt="Marching band in white and green uniforms in large formation on football field at night, with a close up on the drumline">
+                            <img id="dowhigh2019markup" src="images\photos\index\dowhigh2019markup.png" alt="Marching band in white and green uniforms in large formation on football field at night, with a close up on the drumline">
+                        </a>
+                        <i class="fa-solid fa-expand"></i>
+                        <figcaption>
+                            There I am! My first year playing in a marching ensemble! | Dow High School at Marching Band Showcase | October 16, 2019
+                        </figcaption>
+                    </figure>
                 </div>
+                <p id="HIS-4">
+                    So that's how I started playing the marching snare drum. But how did I end up going from Dow High Marching Band to spending thousands of dollars and nearly all of my free time to wear goofy outfits, run around a gym or football field, and practice the snare drum every day?
+                </p>
             </section>
+
 
             <!-- Section 4: Why I Do It -->
             <section class="why-I-do-it" >
+                <div class="slider">
+                    <span id=slider1>
+                        <img src="images/photos/index/mcp23lot.png" alt="marching snare drummers including Nick in colorful uniforms performing and playing their instruments in a parking lot">
+                    </span>
+                    <span id=slider2>
+                        <img src="images/photos/index/rcr23featureshot.png" alt="">
+                    </span>
+                    <span id=slider3>
+                        <img src="images/photos/index/rcr24lot.jpg" alt="">
+                    </span>
+                    <span id=slider4>
+                        <img src="images/photos/index/mcp23wgisign.png" alt="marching snare drummers including Nick in colorful uniforms performing and playing their instruments in a parking lot">
+                    </span>
+                    <span id=slider5>
+                        <img src="images/photos/index/mcp23lot.png" alt="marching snare drummers including Nick in colorful uniforms performing and playing their instruments in a parking lot">
+                    </span>
+                    <span id=slider6>
+                        <img src="images/photos/index/rcr23featureshot.png" alt="">
+                    </span>
+                    <span id=slider7>
+                        <img src="images/photos/index/rcr24lot.jpg" alt="">
+                    </span>
+                    <span id=slider8>
+                        <img src="images/photos/index/mcp23wgisign.png" alt="marching snare drummers including Nick in colorful uniforms performing and playing their instruments in a parking lot">
+                    </span>
+                </div>
                 <div>
                     <h2>Why I Do It</h2>
                     <p>
@@ -124,7 +254,13 @@
         </main>
 
         <footer>
-            <a href="https://www.wgi.org/about-wgi/what-is-wgi/">What is WGI?</a> | <a href="https://www.dci.org/static/about-drum-corps-international">About Drum Corps International</a> | <a href="https://www.wgi.org/start-here/">WGI Start Here Page</a>
+            <nav>
+                <a href="https://www.wgi.org/about-wgi/what-is-wgi/">What is WGI?</a>
+                |
+                <a href="https://www.dci.org/static/about-drum-corps-international">About Drum Corps International</a>
+                |
+                <a href="https://www.wgi.org/start-here/">WGI Start Here Page</a>
+            </nav>
         </footer>
 
         <script>
@@ -185,5 +321,7 @@
                 }
             });
         </script>
+    
+        <script src="lightbox2-2.11.5\dist\js\lightbox-plus-jquery.js"></script>
     </body>
 </html>

@@ -1,40 +1,81 @@
 /* Variables */
-:root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --section-white: #ffffff;
-    --section-black: #000000;
-    --section-padding: 2rem;
+:root, .light-mode {
+    --surface-color: #ffffff;
+    --primary-color: #000000;
+    --03: rgba(0, 0, 0, 0.03);
+    --07: rgba(0, 0, 0, 0.07);
+    --09: rgba(0, 0, 0, 0.09);
+    --12: rgba(0, 0, 0, 0.12);
+    --15: rgba(0, 0, 0, 0.15);
+    --35: rgba(0, 0, 0, 0.35);
+    --65: rgba(0, 0, 0, 0.65)
+}
+
+/* automatically determine color scheme based on preference */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #ffffff;
+        --surface-color: #121212;
+        --03: rgba(255, 255, 255, 0.03);
+        --07: rgba(255, 255, 255, 0.07);
+        --09: rgba(255, 255, 255, 0.09);
+        --12: rgba(255, 255, 255, 0.12);
+        --15: rgba(255, 255, 255, 0.15);
+        --35: rgba(255, 255, 255, 0.35);
+        --65: rgba(255, 255, 255, 0.65);
+    }
+}
+
+/* dark mode */
+.dark-mode {
+    --primary-color: #ffffff;
+    --surface-color: #121212;
+    --03: rgba(255, 255, 255, 0.03);
+    --07: rgba(255, 255, 255, 0.07);
+    --09: rgba(255, 255, 255, 0.09);
+    --12: rgba(255, 255, 255, 0.12);
+    --15: rgba(255, 255, 255, 0.15);
+    --35: rgba(255, 255, 255, 0.35);
+    --65: rgba(255, 255, 255, 0.65);
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--surface-color);
+    color: var(--primary-color);
     margin: 0;
     font-family: "Merriweather Sans", sans-serif;
 }
 
 /* Header styling */
 header {
-    background-color: var(--background-color);
+    background-color: var(--surface-color);
     position: sticky;
     top: 0;
-    display: flex;
-    justify-content: space-between;
-    justify-content: flex-end;
-    align-items: center;
     padding: 1rem 2rem;
     z-index: 1000;
-
-    box-shadow: 0 0px 8px rgba(0,0,0, 0.35);
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.35);
 }
 
-header nav a {
+header nav a, header button, footer nav a {
     text-decoration: none;
     color: var(--text-color);
 
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+footer {
+    background-color: var(--03);
+
+    align-items: center;
+    justify-content: center;
+}
+
+footer > nav > *{
+    align-self: center;
+    justify-self: center;
+    text-align: center;
 }
 
 h1, h2, h3, h4 {
@@ -52,6 +93,17 @@ h2 {
 h3 {
     justify-self: left;
 }
+
+figcaption {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+figure, figure > img {
+    justify-self: center;
+}
+
 
 /* Learn more link */
 .learn-more {
@@ -94,30 +146,6 @@ section, div {
     align-content: center;
 }
 
-.about-WGI {
-    background-color: var(--section-white);
-    color: var(--section-black);
-}
-
-.about-DCI {
-    background-color: var(--section-black);
-    color: var(--section-white);
-    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
-}
-
-.how-I-started,
-.why-I-do-it,
-.other-drumming {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-}
-
-.why-I-do-it {
-    background-color: var(--section-black);
-    color: var(--section-white);
-}
-
 .youtube-video {
     aspect-ratio: 16 / 9;
     width: 100%;
@@ -127,22 +155,65 @@ section, div {
     justify-self: center;
 }
 
-/* Carousel image styling */
-.carousel img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    transition: opacity 0.5s ease-in-out;
+figure {
+    position: relative;
+    display: inline-block; /* Ensures the image doesn't take up the full width */
+}
+
+figure img {
+    display: block; /* Removes inline spacing around the image */
+}
+
+figure i.fa-expand {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    color: white; /* Choose a contrasting color */
+    font-size: 1.5rem; /* Adjust the size of the icon */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+    padding: 0.5em; /* Optional: Add some padding */
+    border-radius: 2em; /* Optional: Add rounded corners */
+    cursor: pointer; /* Makes it clear the icon is interactive */
+}
+
+.color-scheme-toggle {
+    border-radius: 2em;
+    border: 0px solid black;
+    background-color: var(--primary-color);
+    color: var(--surface-color);
+    border: 0.25em solid var(--primary-color);
+
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+    padding: 0.75em; 
+}
+
+.WGI-logo, .DCI-logo {
+    width: 50%;
+    justify-self: center;
+}
+
+
+
+/* animations */
+.dark-mode-toggle:hover {
+    background-color: var(--65);
+    transition: background-color 0.35s ease-in-out;
+}
+
+body, header {
+    transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+
+header nav a {
+    transition: color 0.35s ease-in-out;
 }
 
 header {
     transition: transform 0.3s ease-in-out; /* Smooth sliding effect */
 }
 
-.WGI-logo-black, .DCI-logo-white {
-    width: 50%;
-    justify-self: center;
-}
 
 
 
@@ -151,6 +222,23 @@ header {
 ###############################################
 ############################################ */
 /* grids and layout */
+
+header {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    align-items: center;
+}
+header > nav {
+    justify-self: start;
+}
+header > button {
+    justify-self: end;
+}
+
+footer {
+    align-items: center;
+    justify-items: center;
+}
 
 .general-drum-information {
     justify-items: center;
@@ -208,9 +296,107 @@ header {
     grid-area: 3 / 1 / span 1 / span 2;
 }
 
+.how-I-started, .why-I-do-it {
+    grid-template-rows: repeat(5, auto);
+    justify-content: center;
+    align-items: center;
+}
+.how-I-started > *:not(:first-child) {
+    margin: 0;
+}
+#HIS-1 {
+    grid-area: 1 / 1 / span 1 / span 2;
+}
+#HIS-2 {
+    grid-area: 3 / 1 / span 1 / span 2;
+}
+#HIS-3 {
+    grid-area: 4 / 1 / span 1 / span 2; 
+}
+#HIS-4 {
+    grid-area: 5 / 1 / span 1 / span 2;
+}
 
 
 
+.why-I-do-it {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+
+    position: relative;
+    width: 210px;
+    height: 210px;
+    transform: perspective(800px);
+    transform-style: preserve-3d;
+    animation: rotating-slider 60s linear infinite;
+
+    grid-area: 1 / 1 / span 2 / span 2
+}
+@keyframes rotating-slider {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(-360deg);
+    }
+}
+.slider span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg))
+    translateZ(380px);
+}
+.slider span img {
+    position: absolute;
+    top: 0;
+    Left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    transition: .6s ease;
+}
+.slider span img:hover {
+    transform: translateY(-10px) scale(1.1);
+}
+#slider1 {
+    --i: 1    
+}
+#slider2 {
+    --i: 2    
+}
+#slider3 {
+    --i: 3    
+}
+#slider4 {
+    --i: 4    
+}
+#slider5 {
+    --i: 5    
+}
+#slider6 {
+    --i: 6    
+}
+#slider7 {
+    --i: 7    
+}
+#slider8 {
+    --i: 8    
+}
+#slider9 {
+    --i: 9    
+}
 
 
 .text-logo-grid {
@@ -236,9 +422,8 @@ header {
 }
 
 
-
-.about-WGI * {
-    outline: 5px solid red;
+.about-WGI {
+    margin-top: 5em;
 }
 
 .about-WGI > div {
@@ -250,7 +435,7 @@ header {
     width: 100%;
 }
 
-.about-WGI > div > iframe {
+.about-WGI > div > iframe, .about-WGI > div > figure {
     justify-self: center;
 }
 
@@ -317,11 +502,25 @@ h4 {
     margin-bottom: 0.5em;
     margin-top: 2em;
 }
-header nav a {
+header nav a, header button, footer nav a {
     margin: 0 1rem;
-    font-size: 1rem;
+    font-size: 0.75em;
 }
 
+header {
+    grid-template-columns: 3.5fr 1.5fr;
+}
+
+footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 50px;
+}
+
+figcaption {
+    font-size: 0.75em;
+    margin-top: 0.75em;
+}
 
 #rotating {
     width: 90%;
@@ -331,9 +530,29 @@ header nav a {
     font-size: 1.2rem;
 }
 
+.color-scheme-toggle > i {
+    padding-left: 0.40em;
+    padding-top: 0.25em;
+}
+
+.slider {
+    margin-top: 5em;
+    margin-bottom: 2.5em;
+    justify-self: center;
+    scale: 0.5;
+    width: 225px;
+    height: 150px;
+}
+
 section {
-    padding-left: 5%;
-    padding-right: 5%;
+    max-width: 90%;
+    justify-self: center;
+}
+
+section figure a img, section figure a, figure {
+    justify-self: center;
+    justify-content: center;
+    align-self: center;
 }
 
 
@@ -345,8 +564,7 @@ section {
     }
 
     section {
-        padding-left: 20%;
-        padding-right: 20%;
+        max-width: 85%;
     }
 }
 
@@ -359,8 +577,7 @@ section {
     }
 
     section {
-        padding-left: 20%;
-        padding-right: 20%;
+        max-width: 75%;
     }
 }
 
@@ -373,7 +590,6 @@ section {
     }
     
     section {
-        padding-left: 20%;
-        padding-right: 20%;
+        max-width: 65%;
     }
 }

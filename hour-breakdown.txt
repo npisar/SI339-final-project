@@ -6,3 +6,7 @@
 11/25/24 - 90m - Changed page structure and put all information about each actvity into separate pages
 
 11/26/24 - 360m - lots of content additions and html / css work. added js elements too and took dark / light mode toggle from CPD4
+
+11/18/24 - 90m - finished content on WGI page. Is DCI within the scope right now?
+    Hour calc: 50+50+30+240+90+360+90 = 15h / 20h
+    so NO, not within scope right now. I should pivot and only focus on WGI for now. If I have time I can always add drum corps information--I've already done most of the work.

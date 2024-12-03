@@ -33,6 +33,7 @@
     </head>
 
     <body>
+        <a class="skip-link" href="#main" tabindex="999">Skip to main content</a>
         <header>
             <nav>
                 <a href="index.html">Home</a>
@@ -47,7 +48,7 @@
                 |
             </nav>
 
-            <button class="color-scheme-toggle" onclick="colorSchemeToggle()" tabindex="4">Color Scheme Toggle</button>
+            <button class="color-scheme-toggle" onclick="colorSchemeToggle()" tabindex="0">Color Scheme Toggle</button>
     
                 <script>
                     let previousColorScheme = 'dark-mode'; // Variable to remember the previous color scheme
@@ -65,13 +66,13 @@
                                 body.classList.remove("dark-mode");
                                 body.classList.add("light-mode");
                                 colorSchemeToggleButton.innerHTML = 'Dark Mode<i class="fa-solid fa-moon"></i>';
-                                document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-black.svg';
+                                document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-white.svg';
                                 previousColorScheme = 'light-mode';
                             } else {
                                 body.classList.remove("light-mode");
                                 body.classList.add("dark-mode");
                                 colorSchemeToggleButton.innerHTML = 'Light Mode<i class="fa-solid fa-sun"></i>';
-                                document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-white.svg';
+                                document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-black.svg';
                                 previousColorScheme = 'dark-mode';
                             }
                         } else {
@@ -80,12 +81,12 @@
                                 body.classList.remove("dark-mode");
                                 body.classList.add("light-mode");
                                 colorSchemeToggleButton.innerHTML = 'Dark Mode<i class="fa-solid fa-moon"></i>';
-                                document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-black.svg';
+                                document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-white.svg';
                             } else {
                                 body.classList.remove("light-mode");
                                 body.classList.add("dark-mode");
                                 colorSchemeToggleButton.innerHTML = 'Light Mode<i class="fa-solid fa-sun"></i>';
-                                document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-white.svg';
+                                document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-black.svg';
                             }
         
                             // Update previous color scheme to reflect current state
@@ -101,35 +102,38 @@
                         if (prefersDarkScheme.matches) {
                             document.body.classList.add("dark-mode");
                             document.querySelector(".color-scheme-toggle").innerHTML = 'Light Mode<i class="fa-solid fa-sun"></i>';
-                            document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-white.svg';
+                            document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-black.svg';
                         } else {
                             document.body.classList.add("light-mode");
                             document.querySelector(".color-scheme-toggle").innerHTML = 'Dark Mode<i class="fa-solid fa-moon"></i>';
-                            document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-black.svg';
+                            document.getElementById("WGI-logo").src = 'images/logos/WGI-logo-white.svg';
                         }
                     });
                 </script>
         </header>
 
-        <main>
+        <main id="main">
             <!-- Section 2: About WGI -->
             <section id="about-WGI" class="about-WGI">
                 <div>
-                    <h2 class="text-logo-grid">
+                    <p tabindex="0" id="top-link" tabindex="0">Want to learn more about my specific experiences in WGI? <a href="wgi-experience.html">You can find that here</a>, or in the header underneath "WGI Experience"</p>
+                    <br>
+                    <h2 tabindex="0" class="text-logo-grid standout-h2" tabindex="0">
                         About Winter Guard International (WGI):
                         <br>Description and Mission Statement
                         <img class="WGI-logo" id="WGI-logo" src="images/logos/WGI-logo-black.svg" alt="WGI sport of the arts logo">
                     </h2>
-                    <br>
-                    <p>
+                    <p tabindex="0" >
                         WGI Sport of the Arts is the world's premier organization producing indoor color guard, percussion, and winds competitions.  As a non-profit youth organization, WGI also serves as the governing body for the indoor color guard, percussion, and winds activities. It is called the Sport of the Arts because it brings music to life through performance in a competitive format. Even with over 45 years of history, the sport continues to evolve and grow. There were more than 40,000 participants at the regional level, and more than 12,000 participants at the Sport of the Arts World Championships this past April.
                         <br><br>
+                    </p>
+                    <p tabindex="0">
                         <em>The mission of WGI Sport of the Arts is to inspire and educate young performers around the world with unparalleled competitions and events with the spirit of inclusion, personal development, and community.</em>
                     </p>
                     <br>
                     <div class="wrapper">
                         <figure>
-                            <a href="images/photos/WGI/rcc2018.jpg" data-lightbox="WGI-photos" data-title='RCC Indoor Percussion (Riverside, CA) 2018: "Listen" | @rccdrums on X | April 20, 2018' data-alt="Snare and tenor drummers in white and black uniforms performing with sticks raised">
+                            <a tabindex="0" href="images/photos/WGI/rcc2018.jpg" data-lightbox="WGI-photos" data-title='RCC Indoor Percussion (Riverside, CA) 2018: "Listen" | @rccdrums on X | April 20, 2018' data-alt="Snare and tenor drummers in white and black uniforms performing with sticks raised">
                                 <img id="rcc2018" src="images/photos/WGI/rcc2018.jpg" alt="Snare and tenor drummers in white and black uniforms performing with sticks raised">
                             </a>
                             <i class="fa-solid fa-expand"></i>
@@ -139,55 +143,96 @@
                         </figure>
                     </div>
                     
-                    <h2>General Information</h2>
-                    <p>
-                        I would describe WGI as a mix of drumline, theater, competition, and sport. It is an extremely phyiscally and mentally demanding activity. Top performers are asked to play extremely difficult and techinical music perfectly with one another while running (marching) around a gym or indoor space, along with doing elements of dance and choreography both with and without drums. Performers are athletes, hence "Sport of the Arts"; they have to train their bodies and minds to build the strength and fortitude to not only perform, but rehearse at an extremely high level.
+                    <h2 tabindex="0" class="standout-h2">General Information</h2>
+                    <p tabindex="0">
+                        I would describe WGI as a mix of drumline, theater, competition, and sport. In short, it's drums in a gym.
+                    </p>
+                    <p tabindex="0">
+                        It is an extremely phyiscally and mentally demanding activity. Top performers are asked to play extremely difficult and techinical music perfectly with one another while running (marching) around a gym or indoor space, along with doing elements of dance and choreography both with and without drums.
+                    </p>
+                    <p tabindex="0">
+                        Each performer truly is an athlete (hence "Sport of the Arts"). They have to train their bodies and minds to build the strength and fortitude to not only perform, but rehearse at an extremely high level.
+                    </p>
+                    <br><br>
+                    <h2 tabindex="0" class="standout-h2">WGI is Unique</h2>
+                    <p tabindex="0">
+                        Performing in a WGI percussion ensemble is an especially unique and uncommon activity in a few ways.
+                    </p>
+                    <br>
+                    <h3 tabindex="0" class="standout-h3">You Pay to Perform</h3>
+                    <p tabindex="0">
+                        The first is that it costs a lot of money to perform. You read that correctly; as a performer, you don't get paid, you pay. Member dues for the entire season can range from a couple hundred dollars to more than $2,000, depending on where the group is located, the level they compete at, and a wide range of other factors. Many independent ensembles are ran through nonprofit organizations, and need to count on fundraising efforts to help stay active. Member dues typically cover costs for materials like sticks, mallets, and drumheads, transportation to WGI world finals and regionals, the purchasing of new uniforms, props, or other show materials, etc.
+                    </p>
+                    <br>
+                    <h3 tabindex="0" class="standout-h3">There's a Time Limit</h3>
+                    <p tabindex="0">
+                        The second is that time is limited to perform with one of these groups. Per WGI contest rules, members must be "22 years old by April 1st of the year of competition." That means once you turn 23, you're inelgibile to perform (this is different from the indoor independent color guard circuit also hosted by WGI, where this is no age limit to perform). You've "aged out."<br>
+                        If you have questions like "22 years old? Isn't that around when they would be finishing undergrad?," "Wouldn't it be hard to balance school, work, family, friends, relationships, and free time with such an intense activity?," and "Wouldn't it be hard to pay for that while also going to school?," the answer to all of your questions is yes.
+                    </p>
+                    <br>
+                    <h3 tabindex="0" class="standout-h3">The Community is Insanely Connected</h3>
+                    <p tabindex="0">
+                        The third thing unique about WGI is how connected the community is, and that almost no one is in it for the money. Everyone knows everyone in the drumline world, and typically we all have something nice to say about names we recognize. Trust in individuals, brands, and groups runs deep in the activity, because where it is today wouldn't be possible without the dedicated community backing it up. Many staff members at most groups, regardless of size, aren't walking home with a big paycheck. In fact, many of them lose money every season. Almost everyone around truly cares about indoor drumline and wants to pass on the joy of performing in it and the valuable life lessons they've learned doing it along to the next generation of marching members.
+                    </p>
+                    <br>
+                    <h3 tabindex="0" class="standout-h3">To Reiterate...</h3>
+                    <p tabindex="0">
+                        ...the performers you see in the photos and videos on this page (and the staff members who you don't) are spending upwards of $2,000 out of their own pockets to march with a group. They're spending over 24 hours each week <em>just at rehearsal alone</em> (you'll read more about that <a href="#auditions-and-a-typical-season">below</a>), not counting the extra work done outside of that.
+                    </p>
+                    <p tabindex="0">
+                        ...performers only have a limited time to perform. Top groups require a level of mastery over each performer's instrument incomprehensible to the uneducated viewer. And you have to do it before you've graduated college.
+                    </p>
+                    <p tabindex="0">
+                        ...the activity is community-driven and a true labor of love. It's full of people who give up their own time and resources to make experiences possible for their students.
                     </p>
                         <br><br>
-                    <h3>Ensemble Classifcation</h3>
-                        <p>
+                    <h2 tabindex="0" class="standout-h2">A Deeper Look</h2>
+                        <p tabindex="0">Let's take a closer look at what WGI is and what a season looks like.</p>
+                        <br>
+                    <h3 tabindex="0" class="standout-h3">Ensemble Classifcation</h3>
+                        <p tabindex="0">
                             There are two main divisions of WGI percussion ensembles:
                         </p>
                         <ul>
-                            <li>
+                            <li tabindex="0">
                                 Scholastic: ensembles whose membership comes from the same high school (or a school that feeds in to that particular high school) or ensembles whose membership comes from multiple schools approved to combine resources by the principal.
                             </li>
-                            <li>
+                            <li tabindex="0">
                                 Independent: ensembles whose members are not necessarily associated with a particular school.
                             </li>
                         </ul>
-                        <p>
+                        <p tabindex="0">
                             Within those two divisions, there are four "classes" for percussion groups. These are represented with three letter acronyms like PIO (Percussion Independet Open) or PSW (Percussion Scholastic World).
                         </p>
                         <ul>
-                            <li>
+                            <li tabindex="0">
                                 A Class - Beginning programs and performers.
                             </li>
-                            <li>
+                            <li tabindex="0">
                                 Open Class - The intermediate developmental level of performers.
                             </li>
-                            <li>
+                            <li tabindex="0">
                                 World Class - The most advanced programs and performers.
                             </li>
                         </ul>
                         <br>
                     <div class="wrapper">
                         <figure>
-                            <a href="images/photos/WGI/rhythmx2023.jpg" data-lightbox="WGI-photos" data-title='Rhythm X (Dayton, OH) 2023: "The Unspoken" | Marching.com | April 20-22, 2023' data-alt="Drummers screaming with sticks in outstretched arms, wearing robes and orange drums">
+                            <a tabindex="0" href="images/photos/WGI/rhythmx2023.jpg" data-lightbox="WGI-photos" data-title='Rhythm X (Dayton, OH) 2023: "The Unspoken" | Marching.com | April 20-22, 2023' data-alt="Drummers screaming with sticks in outstretched arms, wearing robes and orange drums">
                                 <img id="rcc2018" src="images/photos/WGI/rhythmx2023.jpg" alt="Drummers screaming with sticks in outstretched arms, wearing robes and orange drums">
                             </a>
                             <figcaption>Rhythm X (Dayton, OH) 2023: "The Unspoken" | Marching.com | April 20-22, 2023</figcaption>
                         </figure>
                     </div>
-                    <br>
-                     <h3 id="competition">WGI is Competitive</h3>
-                        <p>
+                    <br><br>
+                     <h3 tabindex="0" class="standout-h3" id="competition">WGI is Competitive</h3>
+                        <p tabindex="0">
                             WGI is a competitive activity. Groups are judged based on the difficulty of their music and visual performance, how well they perform that content, and the design of their show. At the state, WGI regional, and WGI finals shows, judges appointed by the WGI organization will give feedback and scores for every group. The group with the highest score wins the competition.
                             <br><br>
                             <a href="https://www.generaleffect.media/p/wgi-percussion-breakdown" target="_blank">This article by General Effect Media</a> offers a great introduction to WGI percussion scoring (and other parts of WGI) if you're interested in learning more about the specifics! See the image below for an exmaple WGI score sheet, or as they're referred to in the community, a "recap."
                         <div class="wrapper">
                             <figure>
-                                <a href="images/photos/WGI/wgi2022recap.png" data-lightbox="WGI-photos" data-title='WGI Recap from 2022, showing the scores for each group in each specific "caption" (category) with the totals on the far right' data-alt="large table displaying scores for top 15 Independent World Class ensembles from WGI Finals on April 23, 2022">
+                                <a tabindex="0" href="images/photos/WGI/wgi2022recap.png" data-lightbox="WGI-photos" data-title='WGI Recap from 2022, showing the scores for each group in each specific "caption" (category) with the totals on the far right' data-alt="large table displaying scores for top 15 Independent World Class ensembles from WGI Finals on April 23, 2022">
                                     <img id="wgi2022recap" src="images/photos/WGI/wgi2022recap.png" alt="large table displaying scores for top 15 Independent World Class ensembles from WGI Finals on April 23, 2022">
                                 </a>
                                 <i class="fa-solid fa-expand"></i>
@@ -197,14 +242,14 @@
                             </figure>
                         </div>
                         <br><br>
-                    <h3>Instrumentiation</h3>
-                        <p>
+                    <h3 tabindex="0" class="standout-h3">Instrumentiation</h3>
+                        <p tabindex="0">
                             A typical independent WGI group consists of roughly 15-25 battery percussionists playing marching snare drums, tenor drums, bass drums, and cymbals, 10-20 front ensemble members playing keyboard instruments, a drumset, accessory percussion, and electronics like synthesizers (all front ensemble are typically connected to speakers and amplified), and sometimes a visual ensemble who aim to add visual interest to the show or help move props around and don't typically play any instruments.
                         </p>
-                        <p>
+                        <p tabindex="0">
                             Standard instrumentation for Independent World groups might look something like:
                         </p>
-                    <h3>Battery</h3>
+                    <h3 tabindex="0" class="standout-h3">Battery</h3>
                         <ul>
                             <li>
                                 7-10 Snare Drums
@@ -222,7 +267,7 @@
                                 0-??? Visual Ensemble (Depends on the show!)
                             </li>
                         </ul>
-                    <h3>Front Ensemble</h3>
+                    <h3 tabindex="0" class="standout-h3">Front Ensemble</h3>
                         <ul>
                             <li>
                                 5-6 Marimbas
@@ -249,7 +294,7 @@
                         <br>
                     <div class="wrapper">
                         <figure>
-                            <a href="images/photos/WGI/mcm2016.jpg" data-lightbox="WGI-photos" data-title='Music City Mystique (Nashville, TN) 2016: "In Bloom" | Marching.com | April 10-12, 2014' data-alt="Tenor drummers performing in white and lime green uniforms with silver drums">
+                            <a tabindex="0" href="images/photos/WGI/mcm2016.jpg" data-lightbox="WGI-photos" data-title='Music City Mystique (Nashville, TN) 2016: "In Bloom" | Marching.com | April 10-12, 2014' data-alt="Tenor drummers performing in white and lime green uniforms with silver drums">
                                 <img id="mcm2016" src="images/photos/WGI/mcm2016.jpg" alt="Tenor drummers performing in white and lime green uniforms with silver drums">
                             </a>
                             <i class="fa-solid fa-expand"></i>
@@ -259,31 +304,31 @@
                         </figure>
                     </div>
                     <br><br>
-                    <h3>Auditions and a Typical Season</h3>
-                        <p>
+                    <h3 tabindex="0" class="standout-h3" id="auditions-and-a-typical-season">Auditions and a Typical Season</h3>
+                        <p tabindex="0">
                             Most WGI groups will begin the season in October to November with auditions. Auditions test performers on their marching and playing abilities, both separately and together, as well as their mental game and performance quailties. The staff selects the members they believe will best meet the demands of the group for that season. Groups typically release an audition packet a 1-4 months before the audition, which normally contains exercises, show music excerpts, and information on how that specific group plans to approach each instrument.
                         </p>
-                        <p>
+                        <p tabindex="0">
                             After the ensemble has been set, independent groups will start rehearsing on the weekends. For many, that means at least all day on Saturday and half or two thirds of the day on Sunday. Many groups, especially World Class groups, also rehearse Friday nights. The schedule for Redline, the World Class group I'm performing with this year is:
                         </p>
                         <ul>
-                            <li>
+                            <li tabindex="0">
                                Friday: 8:00pm-12:00am
                             </li>
-                            <li>
+                            <li tabindex="0">
                                 Saturday: 10:00am-11:00pm
                             </li>
-                            <li>
-                                Sunday: 10:00am-11:00pm
+                            <li tabindex="0">
+                                Sunday: 10:00am-5:30pm
                             </li>
                         </ul>
-                        <p>
-                            Many ensembles will also rehearse around the holidays with a 3-5 long day "camp" where they work on a large portion of their show. In around February, most groups will start going to competitions in state circuits. <a href="#competition">Read more about how competitions work below.</a> Along with state circuit competitions, there are also WGI-sponsored regional competitions. These attract groups from around the area. For example, many groups from Michigan, Ohio, and other places around the midwest attend the WGI Mid-East Regional hosted in Kentucky. Every group must attend at least one WGI regional if they want to attend WGI Finals, unless there are no regional competitions within 400 miles of where they're based.
+                        <p tabindex="0">
+                            Many ensembles will also rehearse around the holidays with a 3-5 long day "camp" where they work on a large portion of their show. In around February, most groups will start going to competitions in state circuits. <a tabindex="0" href="#competition">Read more about how competitions work below.</a> Along with state circuit competitions, there are also WGI-sponsored regional competitions. These attract groups from around the area. For example, many groups from Michigan, Ohio, and other places around the midwest attend the WGI Mid-East Regional hosted in Kentucky. Every group must attend at least one WGI regional if they want to attend WGI Finals, unless there are no regional competitions within 400 miles of where they're based.
                         </p>
                         <br><br>
                     <div class="wrapper">
                         <figure>
-                            <a href="images\photos\WGI\pulse2017.jpg" data-lightbox="WGI-photos" data-title='Pulse Percussion (Westminster, CA) 2017: "The Uninvited" | Marching.com | April 20-22, 2017' data-alt="WGI bass drum player with mallets in playing position at head with a dark red and black uniform and black face makeup">
+                            <a tabindex="0" href="images\photos\WGI\pulse2017.jpg" data-lightbox="WGI-photos" data-title='Pulse Percussion (Westminster, CA) 2017: "The Uninvited" | Marching.com | April 20-22, 2017' data-alt="WGI bass drum player with mallets in playing position at head with a dark red and black uniform and black face makeup">
                                 <img id="up2024" src="images\photos\WGI\pulse2017.jpg" alt="WGI bass drum player with mallets in playing position at head with a dark red and black uniform and black face makeup">
                             </a>
                             <i class="fa-solid fa-expand"></i>
@@ -293,31 +338,17 @@
                         </figure>
                     </div>
                     <br><br>
-                    <h3>Why Rehearse so Much?</h3>
-                        <p>
+                    <h3 tabindex="0" class="standout-h3">Why Rehearse so Much?</h3>
+                        <p tabindex="0">
                             The goal of a WGI percussion ensemble is for every performer on the floor to perform their music and visual package as close to perfectly as possible. That's a tall order. The act of moving and playing an instrument on it's own is <em>hard</em>. The performers in WGI are typically marching around the floor at tempos of upwards of 180 beats per minutes, and playing music that takes years of dedicated work to even be able to perform standing still.
                         </p>
-                        <p>
+                        <p tabindex="0">
                             "Clean" is a word thrown around a lot. If something is truly "clean", it maens that the people performing the material are performing it at the exact same moment in the <em>exact same way</em>. That level of synchronization, mastery over both body and instrument, and also the additional ability to perform in a way that's engaging and meaningful to the audience is what nesseciates that many hours of rehearsal.
                         </p>
                         <br><br>
-                    <h3>WGI Finals</h3>
-                        <p>
-                            What are WGI Finals? In mid April every year, roughly 250 of the percussion groups from around the country--ranging from those ran out of high schools to independent groups run by nonprofit organizations--converge on Dayton, Ohio for the WGI Percussion World Championships, the final event of the year.
-                        </p>
-                        <p>
-                            In the A classes (PIA and PSA), every group performs in prelims against all of the other A class groups, and the top 15 of all of those groups advance to finals.
-                        </p>
-                        <p>
-                            In the Open and World classes, every group will perform in prelims against other groups of their class, and only the top 24 of all of those groups will advance to semifinals. Only the top 15 of those semifinalists will advance to finals.
-                        </p>
-                        <p>
-                            Each class' events are held separately. The idea of the classifcation system is to allow the groups that are attempting to perform content of similar levels of complexity to compete agaisnt each other. This way, there's a realistic chance for groups of all talent levels, membership, etc. to have competitive success.
-                        </p>
-                        <br>
                         <div class="wrapper">
                             <figure>
-                                <a href="images/photos/WGI/up2024.jpg" data-lightbox="WGI-photos" data-title='United Percussion (Camden County, NJ) 2024: "The Shape of Things to Come" | Marching.com | April 18-20, 2024' data-alt="WGI marimba player rasing mallets above head">
+                                <a tabindex="0" href="images/photos/WGI/up2024.jpg" data-lightbox="WGI-photos" data-title='United Percussion (Camden County, NJ) 2024: "The Shape of Things to Come" | Marching.com | April 18-20, 2024' data-alt="WGI marimba player rasing mallets above head">
                                     <img id="up2024" src="images/photos/WGI/up2024.jpg" alt="WGI marimba player rasing mallets above head">
                                 </a>
                                 <i class="fa-solid fa-expand"></i>
@@ -327,13 +358,92 @@
                             </figure>
                         </div>
                         <br><br>
-                    <h3>What a Performance Looks Like</h3>
-                        <p>
-                            Most groups will have a digitally-printed tarp, and some form of props. What a group does with their show is totally up to them, although WGI does have rules and regulations in place for performer safety and content guidelines. At a show, the group will roll their floor, all of their props, instruments, and electronics onto the floor in front of a timing line. When a judge gives a go, a 9 to 11 minute timer starts, depending on the classifcation of the ensemble. World Class shows can be up to 8 minutes long, with the remaining 3 of 11 minutes spent setting up and tearing down the entire operation so the next group can make it in and perform their show.
+                    <h3 tabindex="0" class="standout-h3">WGI Finals</h3>
+                        <p tabindex="0">
+                            What are WGI Finals? In mid April every year, roughly 250 of the percussion groups from around the country--ranging from those ran out of high schools to independent groups run by nonprofit organizations--converge on Dayton, Ohio for the WGI Percussion World Championships, the final event of the year.
+                        </p>
+                        <p tabindex="0">
+                            In the A classes (PIA and PSA), every group performs in prelims against all of the other A class groups, and the top 15 of all of those groups advance to finals.
+                        </p>
+                        <p tabindex="0">
+                            In the Open and World classes, every group will perform in prelims against other groups of their class, and only the top 24 of all of those groups will advance to semifinals. Only the top 15 of those semifinalists will advance to finals.
+                        </p>
+                        <p tabindex="0">
+                            Each class' events are held separately. The idea of the classifcation system is to allow the groups that are attempting to perform content of similar levels of complexity to compete agaisnt each other. This way, there's a realistic chance for groups of all talent levels, membership, etc. to have competitive success.
+                        </p>
+                        <br><br>
+                        <div class="wrapper">
+                            <figure>
+                                <a tabindex="0" href="images/photos/WGI/UD-arena.jpg" data-lightbox="WGI-photos" data-title='WGI World Class Finals Retreat, the awards ceremony where the scores for the night are announced' data-alt="Confetti being blown over full floor at the University of Dayton Arena">
+                                    <img id="UD-arena" src="images/photos/WGI/UD-arena.jpg" alt="Confetti being blown over full floor at the University of Dayton Arena">
+                                </a>
+                                <i class="fa-solid fa-expand"></i>
+                                <figcaption>
+                                    WGI World Class Finals Retreat, the awards ceremony where the scores for the night are announced
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <br><br>
+                    <h3 tabindex="0" class="standout-h3">What a Performance Looks Like</h3>
+                        <p tabindex="0">
+                            All of that rehearsal is to prepare for WGI finals. So: what does a performance there actually look like?
+                        </p>
+                        <p tabindex="0">
+                            To give a quick synopsis of what shows look like: most groups will have a digitally-printed tarp, and some form of props. What a group does with their show is totally up to them, although WGI does have rules and regulations in place for performer safety and content guidelines. At a show, the group will roll their floor, all of their props, instruments, and electronics onto the floor in front of a timing line. When a judge gives a go, a 9 to 11 minute timer starts, depending on the classifcation of the ensemble. World Class shows can be up to 8 minutes long, with the remaining 3 of 11 minutes spent setting up and tearing down the entire operation so the next group can make it in and perform their show.
+                        </p>
+                        <p tabindex="0">
+                            Here are some videos of shows I've found influential, impactful, or otherwise awesome. They're a large part of the reason why I'm so invested in the activity today.
                         </p>
                         <br>
+                        <div class="ytgrid">
+                            <div class="wrapper" id="rhythmx22">
+                                <iframe tabindex="0"
+                                    src="https://www.youtube.com/embed/llUtM-jI5Dw?si=w4zR3BFPU6Br6zWP"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="wrapper" id="dartmouth23">
+                                <iframe tabindex="0"
+                                    src="https://www.youtube.com/embed/KJTd9dSKwJM?si=QTYAWUbp7FuHPYai"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="wrapper" id="mcm17">
+                                <iframe tabindex="0"
+                                    src="https://www.youtube.com/embed/hVEVKz_SVrc?si=wO1JRWwPMmbZUIFo"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="wrapper" id="rhythmx09">
+                                <iframe tabindex="0"
+                                    src="https://www.youtube.com/embed/ERP6zHLrJoE?si=UTJ2p1oLXwFsJWvQ"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                        <p tabindex="0">
+                            Here's a timelapse of WGI 2023 finals, showing each group setting up, performing, and tearing down. You can get a pretty good idea of how groups are moved in and out in a normal competition setting by watching this video.
+                        </p>
+                        <br><br>
                         <div class="wrapper">
-                            <iframe class="youtube-video"
+                            <iframe tabindex="0"
+                            class="youtube-video" id="UDarena-video"
                             src="https://www.youtube.com/embed/nfLA6YSBtRs?si=W7STFhvlngtKH2E_"
                             title="YouTube video player"
                             frameborder="0"
@@ -343,22 +453,18 @@
                             </iframe>
                         </div>
                         <br>
-                        <div class="wrapper">
-                            <figure>
-                                <a href="images/photos/WGI/UD-arena.jpg" data-lightbox="WGI-photos" data-title='WGI World Class Finals Retreat, the awards ceremony where the scores for the night are announced' data-alt="Confetti being blown over full floor at the University of Dayton Arena">
-                                    <img id="UD-arena" src="images/photos/WGI/UD-arena.jpg" alt="Confetti being blown over full floor at the University of Dayton Arena">
-                                </a>
-                                <i class="fa-solid fa-expand"></i>
-                                <figcaption>
-                                    WGI World Class Finals Retreat, the awards ceremony where the scores for the night are announced
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <br>
                     
                         <br><br>
+                    <h2 tabindex="0" class="standout-h2">Final Thoughts</h2>
+                        <p tabindex="0">
+                            WGI is an activity that's been extremely important to me over the last 3-4 years of my life. I was already getting into it watching shows online and warmup videos of drumlines I liked, but I loved it even more as soon as I started doing it myself. My appreciation for the activity and the people who I do it with is even greater than it was even a year ago at this point.
+                        </p>
+                        <p tabindex="0">
+                            You just read a relatively brief synopsis of what you need to understand the activity. If you're interested in learning more about my specific journey through WGI thus far, you can find that <a href="wgi-experience.html">here</a> or in the header under "WGI Experience"
+                        </p>
                 </div>
             </section>
+
         </main>
 
         <footer>

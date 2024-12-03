@@ -1,7 +1,4 @@
-Need to add tabindexing!
-
-Add video captions to embeds on WGI page
-
-Update footer with new links
-
-Add floating text animations to talk about lessons I've learned from WGI / DCI
+Finish about wgi page
+Finish main content on index
+make presentation
+responsive design

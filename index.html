@@ -30,10 +30,12 @@
     </head>
 
     <body>
+        <a class="skip-link" href="#main" tabindex="0">Skip to main content</a>
         <header>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about-wgi.html">About WGI</a>
+                <a href="wgi-experience.html">WGI Experience</a>
             </nav>
 
             <button class="color-scheme-toggle" onclick="colorSchemeToggle()" tabindex="4">Color Scheme Toggle</button>
@@ -100,28 +102,28 @@
                 </script>
         </header>
 
-        <main>
-            <div class="title-container">
-                <h1 class="title" id="rotating">What is Drum Corps?</h1>
-                <a class="learn-more" href="#general-drum-information">Click here or scroll for answers ↓</a>
-            </div>
-            <!-- Section 1: Introduction -->
-            <section id="general-drum-information" class="general-drum-information">
-                <h2>"Tell me about that <em>drum thing</em> you do"</h2>
-                
-                <div class="collage">
-                    <img src="images\photos\index\image1.png" id=image1 alt="performing with WGI group MidMichigan Impact from 2022">
-                    <img src="images\photos\index\image2.png" id="image2" alt="warming up with DCI group River City Rhythm from 2023">
-                    <img src="images\photos\index\image3.png" id="image3" alt="performing with WGI group Motor City Percussion from 2023">
-                    <img src="images\photos\index\image4.png" id="image4" alt="Motor City Percussion snareline with Michigan Alliance for Performing Arts Percussion Independent Open Champions banner from 2024">
-                    <img src="images\photos\index\image5.png" id="image5" alt="River City Rhythm 2024 snareline">
-                    <img src="images\photos\index\image6.png" id="image6" alt="Motor City Percussion 2023 snareline">
-                    <img src="images\photos\index\image7.png" id="image7" alt="Motor City Percussion 2024 snareline">
-                    <img src="images\photos\index\image8.png" id="image8" alt="Motor City Percussion members posing in front of River City Rhythm truck from 2024">
-                    <img src="images\photos\index\image10.png" id="image9" alt="River City Rhythm 2024 battery in a circle, hands extended">
-                    <img src="images\photos\index\image11.png" id="image10" alt="performing with Motor City Percussion from 2024">
-                </div>
-                
+        <div class="title-container">
+            <h1 class="title" id="rotating">What is Drum Corps?</h1>
+            <a tabindex="0" class="learn-more" href="#general-drum-information">Click here or scroll for answers ↓</a>
+        </div>
+        
+        <h2>"Tell me about that <em>drum thing</em> you do"</h2>
+        
+        <div class="collage">
+            <img src="images\photos\index\image1.png" id=image1 alt="performing with WGI group MidMichigan Impact from 2022">
+            <img src="images\photos\index\image2.png" id="image2" alt="warming up with DCI group River City Rhythm from 2023">
+            <img src="images\photos\index\image3.png" id="image3" alt="performing with WGI group Motor City Percussion from 2023">
+            <img src="images\photos\index\image4.png" id="image4" alt="Motor City Percussion snareline with Michigan Alliance for Performing Arts Percussion Independent Open Champions banner from 2024">
+            <img src="images\photos\index\image5.png" id="image5" alt="River City Rhythm 2024 snareline">
+            <img src="images\photos\index\image6.png" id="image6" alt="Motor City Percussion 2023 snareline">
+            <img src="images\photos\index\image7.png" id="image7" alt="Motor City Percussion 2024 snareline">
+            <img src="images\photos\index\image8.png" id="image8" alt="Motor City Percussion members posing in front of River City Rhythm truck from 2024">
+            <img src="images\photos\index\image10.png" id="image9" alt="River City Rhythm 2024 battery in a circle, hands extended">
+            <img src="images\photos\index\image11.png" id="image10" alt="performing with Motor City Percussion from 2024">
+        </div>
+
+        <main id="main">            
+            <section id="general-drum-information" class="general-drum-information">    
                 <h2>It's really pretty simple.</h2>
                 <p>
                     I've loved playing the snare drum since 5th grade, and specifically the marching snare drum since 7th grade. I've taken that passion to an extreme most people don't know exists.
@@ -244,12 +246,25 @@
 
         <footer>
             <nav>
-                <a href="https://www.wgi.org/about-wgi/what-is-wgi/">What is WGI?</a>
-                |
-                <a href="https://www.dci.org/static/about-drum-corps-international">About Drum Corps International</a>
-                |
-                <a href="https://www.wgi.org/start-here/">WGI Start Here Page</a>
+                <p>More Resources:</p>
+                <br>
+                <a tabindex="0" href="https://www.wgi.org/">Official WGI Website</a>
+                <br>
+                <a tabindex="0" href="https://www.wgi.org/about-wgi/what-is-wgi/">What is WGI?</a>
+                <br>
+                <a tabindex="0" href="https://www.wgi.org/start-here/">WGI "Start Here" Page</a>
+                <br>
+                <a tabindex="0" href="https://en.wikipedia.org/wiki/Winter_Guard_International">WGI Wikipedia Page</a>
             </nav>
+
+            <p>
+                <br><br><br>
+                Created by Nick Pisarczyk
+                <br>
+                SI339 Individual Project
+                <br>
+                December 4th, 2024
+            </p>
         </footer>
 
         <script>

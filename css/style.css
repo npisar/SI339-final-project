@@ -59,7 +59,7 @@ header {
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.35);
 }
 
-header nav a, header button, footer nav {
+header nav a, header button, footer {
     text-decoration: none;
     color: var(--text-color);
 
@@ -75,7 +75,7 @@ footer {
     justify-content: center;
 }
 
-footer > nav > *{
+footer > nav > * {
     align-self: center;
     justify-self: center;
     text-align: center;
@@ -91,6 +91,7 @@ h1, h2, h3, h4 {
 
 h2 {
     align-self: center;
+    justify-self: center;
 }
 
 .standout-h2 {
@@ -101,7 +102,7 @@ h2 {
 }
 
 .standout-h3 {
-    background-color: var(--03);
+    background-color: var(--07);
     padding: 1.0em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
@@ -471,28 +472,28 @@ footer {
 }
 
 
-.about-WGI {
+.WGI-section {
     margin-top: 5em;
 }
 
-.about-WGI > div {
+.WGI-section > div {
     justify-items: left;
 }
 
-.about-WGI > div > img {
+.WGI-section > div > img {
     justify-self: center;
     width: 100%;
 }
 
-.about-WGI > div > iframe, .about-WGI > div > figure {
+.WGI-section > div > iframe, .WGI-section > div > figure {
     justify-self: center;
 }
 
-.about-WGI > div > li {
+.WGI-section > div > li {
     max-width: 90%;
 }
 
-.about-WGI > p {
+.WGI-section > p {
     text-align: left;
     width: 100%;
 }
@@ -574,6 +575,10 @@ footer {
     padding-top: 100px;
     padding-bottom: 100px;
     margin-top: 50px;
+    text-align: center;
+}
+footer > nav {
+    width: 75%;
 }
 
 figcaption {
@@ -653,13 +658,19 @@ section figure a img, section figure a, figure {
         grid-area: 1 / 1 / span 1 / span 2;
     }
     #HIS-2 {
-        grid-area: 3 / 1 / span 1 / span 2;
+        grid-area: 2 / 1 / span 1 / span 2;
     }
     #HIS-3 {
-        grid-area: 4 / 1 / span 1 / span 2; 
+        grid-area: 3 / 1 / span 1 / span 2; 
     }
     #HIS-4 {
+        grid-area: 4 / 1 / span 1 / span 2;
+    }
+    #HIS-5 {
         grid-area: 5 / 1 / span 1 / span 2;
+    }
+    #HIS-6 {
+        grid-area: 6 / 1 / span 1 / span 2;
     }
 }
 

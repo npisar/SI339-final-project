@@ -43,7 +43,10 @@ body {
     background-color: var(--surface-color);
     color: var(--primary-color);
     margin: 0;
-    font-family: "Merriweather Sans", sans-serif;
+    font-family: "Onest", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Header styling */
@@ -56,7 +59,7 @@ header {
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.35);
 }
 
-header nav a, header button, footer nav a {
+header nav a, header button, footer nav {
     text-decoration: none;
     color: var(--text-color);
 
@@ -104,6 +107,10 @@ figure, figure > img {
     justify-self: center;
 }
 
+.spacer {
+    margin-top: 500px;
+    margin-bottom: 500px;
+}
 
 /* Learn more link */
 .learn-more {
@@ -130,7 +137,7 @@ section {
 }
 
 section, div {
-    font-family: "Merriweather Sans", sans-serif;
+    font-family: "Onest", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -297,7 +304,7 @@ footer {
 }
 
 .how-I-started, .why-I-do-it {
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(7, auto);
     justify-content: center;
     align-items: center;
 }
@@ -308,13 +315,19 @@ footer {
     grid-area: 1 / 1 / span 1 / span 2;
 }
 #HIS-2 {
-    grid-area: 3 / 1 / span 1 / span 2;
+    grid-area: 2 / 1 / span 1 / span 2;
 }
 #HIS-3 {
-    grid-area: 4 / 1 / span 1 / span 2; 
+    grid-area: 3 / 1 / span 1 / span 2;
 }
 #HIS-4 {
-    grid-area: 5 / 1 / span 1 / span 2;
+    grid-area: 4 / 1 / span 1 / span 2;
+}
+#HIS-5 {
+    grid-area: 5 / 1 / span 1 / span 2; 
+}
+#HIS-6 {
+    grid-area: 6 / 1 / span 1 / span 2;
 }
 
 
@@ -476,6 +489,11 @@ div.about-DCI-container {
 
 
 
+
+
+
+
+
 /* ############################################
 ###############################################
 ############################################ */
@@ -523,7 +541,7 @@ figcaption {
 }
 
 #rotating {
-    width: 90%;
+    width: 85%;
 }
 .learn-more {
     padding: 20px;
@@ -544,8 +562,12 @@ figcaption {
     height: 150px;
 }
 
+h2 {
+    width: 90%
+}
+
 section {
-    max-width: 90%;
+    width: 90%;
     justify-self: center;
 }
 
@@ -564,7 +586,20 @@ section figure a img, section figure a, figure {
     }
 
     section {
-        max-width: 85%;
+        width: 85%;
+    }
+
+    #HIS-1 {
+        grid-area: 1 / 1 / span 1 / span 2;
+    }
+    #HIS-2 {
+        grid-area: 3 / 1 / span 1 / span 2;
+    }
+    #HIS-3 {
+        grid-area: 4 / 1 / span 1 / span 2; 
+    }
+    #HIS-4 {
+        grid-area: 5 / 1 / span 1 / span 2;
     }
 }
 
@@ -577,7 +612,7 @@ section figure a img, section figure a, figure {
     }
 
     section {
-        max-width: 75%;
+        width: 75%;
     }
 }
 
@@ -590,6 +625,6 @@ section figure a img, section figure a, figure {
     }
     
     section {
-        max-width: 65%;
+        width: 65%;
     }
 }

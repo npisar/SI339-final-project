@@ -610,7 +610,10 @@ section figure a img, section figure a, figure {
 #UDarena-video, #impact22-video {
     width: 50vw
 }
-
+#jeremy-wisler-cam {
+    width: 225px;
+    height: 113px;
+}
 .ytgrid {
     display: grid;
     grid-template-columns: 1fr;
@@ -643,8 +646,8 @@ section figure a img, section figure a, figure {
     }
 
     #jeremy-wisler-cam {
-        width: 500px;
-        height: 309px;
+        width: 400px;
+        height: 225px;
     }
     .ytgrid {
         grid-template-columns: 1fr 1fr;
@@ -683,6 +686,10 @@ section figure a img, section figure a, figure {
         width: 75%;
     }
 
+    #jeremy-wisler-cam {
+        width: 300px;
+        height: 169px;
+    }
     .ytgrid > div > iframe{
         width: 350px;
         height: 197px;
@@ -703,6 +710,10 @@ section figure a img, section figure a, figure {
     }
     #mcp24-image5-link {
         width: 35%;
+    }
+        #jeremy-wisler-cam {
+        width: 500px;
+        height: 309px;
     }
 }
 

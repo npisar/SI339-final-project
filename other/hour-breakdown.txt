@@ -12,3 +12,5 @@
     so NO, not within scope right now. I should pivot and only focus on WGI for now. If I have time I can always add drum corps information--I've already done most of the work.
 
 12/02/24 - 120m - worked on WGI experience page and changed some styling and layout 
+
+12/03/24 - 120m+

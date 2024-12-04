@@ -30,12 +30,14 @@
     </head>
 
     <body>
-        <a class="skip-link" href="#main" tabindex="0">Skip to main content</a>
+        <button onclick="topFunction()" id="backToTop" title="Back to Top">Back to Top</button>
         <header>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about-wgi.html">About WGI</a>
-                <a href="wgi-experience.html">WGI Experience</a>
+            <nav aria-label="header-nav">
+                <a href="index.html" tabindex="0">Home</a>
+                <a href="about-wgi.html" tabindex="0">About WGI</a>
+                <a href="wgi-experience.html" tabindex="0">WGI Experience</a>
+                <br>
+                <a class="skip-link" href="#main" tabindex="0">Skip to main content</a>
             </nav>
 
             <button class="color-scheme-toggle" onclick="colorSchemeToggle()" tabindex="0">Color Scheme Toggle</button>
@@ -105,12 +107,19 @@
         <main id="main">
             <section id="WGI-section" class="WGI-section">
                 <div>
-                    <p tabindex="0" id="top-link" tabindex="0">Want to learn more about what WGI is and how it works? <a href="about-wgi.html">You can find that here</a>, or in the header underneath "About WGI"</p>
+                    <p tabindex="0" id="top-link">Want to learn more about what WGI is and how it works? <a href="about-wgi.html">You can find that here</a>, or in the header underneath "About WGI"</p>
+                    <br>
+                    <p id="quick-links">
+                        Quick Links:<br>
+                        <a href="#impact22" tabindex="0">MidMichigan Impact 2022</a><br>
+                        <a href="#mcp23" tabindex="0">Motor City Percussion 2023</a><br>
+                        <a href="#mcp24" tabindex="0">Motor City Percussion 2024</a>
+                    </p>
                     <br>
                     <h2 tabindex="0" class="standout-h2" tabindex="0">
                         My experiences in WGI ensembles
                     </h2>
-                    <p tabindex="0" >
+                    <p tabindex="0" id="main-content">
                         I started performing with WGI ensembles in 2022 as a high school junior. I had initially found the activity through YouTube and was interested in performing in it myself.
                         <br>
                     </p>
@@ -118,7 +127,7 @@
                         My first experience with anything WGI-related was going to an audition. In October 2022, I went to an audition for a world class group based out of Plymouth, Michigan called Redline. In the audition room, I was surrounded by 19-22 year olds as an almost-17-year old. I was a little intimiated, but I didn't really know enough about marching drumming to even consider that I would get cut. I thought I had it all figured out. Safe to say: I didn't.
                     </p>
                     <br>
-                    <div class="wrapper">
+                    <div class="wrapper" id="impact-image1-link">
                         <figure>
                             <a tabindex="0" href="images/photos/WGI-experience/Impact22/impact-image1.jpg" data-lightbox="WGI-experience-photos" data-title='Performing with MidMichigan Impact at a Michigan Alliance for Performing Arts (MAPA) competition | MAPA | February - March 2022' data-alt="Snare drummer in black dress chlothes, black hat, and yellow tie playing snare drum with mouth open">
                                 <img id="impact-image1" src="images/photos/WGI-experience/Impact22/impact-image1.jpg" alt="Snare and tenor drummers in white and black uniforms performing with sticks raised">
@@ -131,7 +140,7 @@
                     </div>
                     <br>
                     
-                    <h2 tabindex="0" class="standout-h2">MidMichigan Impact 2022<br>"The Groove Club"</h2>
+                    <h2 tabindex="0" class="standout-h2" id="impact22">MidMichigan Impact 2022<br>"The Groove Club"</h2>
                     <p tabindex="0">
                         After getting cut from Redline in 2022 (by the end of that audition day, I figured as much was going to happen), I decided to go out to another audition: MidMichigan Impact. This was an A class group led by my high school drumline instructor, Chris Sabourin. Impact was based right in Midland where I was going to school, and it was super convenient to get to rehearsal--only a 20 minute drive at max. Impact was formerly known as the Resonators Drumline, but had been competitively inactive for a few years. They had started getting back together in 2021, and 2022 was their official return to competition under the new name.
                     </p>
@@ -151,6 +160,7 @@
                         </figure>
                     </div>
                     <br>
+                    <h3 class="standout-h3">The Show</h3>
                     <p tabindex="0">
                         The show this season was called "The Groove Club." It was swing and jazz-inspired, and I had my first experience doing very basic character work and acting / performing, both while playing and without the drums on.
                     </p>
@@ -172,12 +182,12 @@
                     <br><br>
                     
 
-                    <h2 tabindex="0" class="standout-h2">Motor City Percussion 2023<br>"The Night Shift"</h2>
+                    <h2 tabindex="0" class="standout-h2" id="mcp23">Motor City Percussion 2023<br>"The Night Shift"</h2>
                     <p tabindex="0">
                         Motor City Percussion (shortened to MCP) was my first step into Open Class indoor drumline. I spent more time preparing for the audition, even posting progress videos on my Instagram account. I remember going to the clinic that they held and being a little surprised by how different it was from Impact. The expectations were different, the people around me were drumming better than I was. It was an entirely new atmosphere. And the auditions were also far away. I had to make nearly a two hour drive to get there. Speaking of auditions, I also auditioned for Redline again this season. At this point, I knew I had a better chance, but didn't think I would get a spot. And I was right. I got cut. Back to MCP, though. If I were to make it, rehearsal would be every single weekend, all day on Saturday and half of the day on Sunday. I would have much harder music, a ton more visual and performance responsibilities (which I didn't even know about or consider at the time), and generally be far more challenged as a performer than I was at Impact in 2022.
                     </p>
                     <br>
-                    <div class="wrapper">
+                    <div class="wrapper" id="mcp23-image1-link">
                         <figure>
                             <a tabindex="0" href="images/photos/WGI-experience/MCP23/MCP-image1.jpg" data-lightbox="WGI-experience-photos" data-title='The MCP 2023 Snareline. From left to right: Brandon Perez, Simon VanderWall, me, Jordan Helms, Emmett Addison, Gabriel Fess, and Dylan Angel | January 8, 2023' data-alt="7 young adults standing in a line on top of black floor in a high school gym, arms behind each other, smiling">
                                 <img id="mcp23-image1" src="images/photos/WGI-experience/MCP23/MCP-image1.jpg" alt="7 young adults standing in a line on top of black floor in a high school gym, arms behind each other, smiling">
@@ -204,7 +214,7 @@
                         Marching or doing choreography and playing at the same time is <em>hard.</em> I vividly remember that every time we would get new drill or choreography, I would have a huge struggle trying to put my hands with my feet. I had simply never done it before. This season, I gained a new appreciation for what the groups at the top of the activity were doing. I had a new frame of reference for how insanely difficult the stuff they pull off is.
                     </p>
                     <br>
-                    <div class="wrapper">
+                    <div class="wrapper" id="mcp23-image2-link">
                         <figure>
                             <a tabindex="0" href="images/photos/WGI-experience/MCP23/MCP-image3.jpg" data-lightbox="WGI-experience-photos" data-title='MCP 2023 snareline performing at MAPA Milford | February 18, 2023' data-alt="7 snare drummers in yellow jumpsuits wearing and playing their drums, oither performers around them in the front with sponsor banners for the Michigan Alliance for Performing Arts in the background">
                                 <img id="mcp23-image2" src="images/photos/WGI-experience/MCP23/MCP-image3.jpg" alt="7 snare drummers in yellow jumpsuits wearing and playing their drums, oither performers around them in the front with sponsor banners for the Michigan Alliance for Performing Arts in the background">
@@ -221,7 +231,7 @@
                         Have you heard of the Dunning-Krueger effect? I got hit by that hard this season. There was so much I didn't know about WGI and drums in general. Every weekend, something I had never heard of or experienced before was thrown at me. New ideas of how to approach the instrument, how to rehearse better, what it meant to play clean with a group (and to not play clean). I felt like my brain and ears expanded a ton during this season--more so than I even thought they would. I thought I had it figured out; I didn't.
                     </p>
                     <br>
-                    <div class="wrapper">
+                    <div class="wrapper" id="mcp23-image3-link">
                         <figure>
                             <a tabindex="0" href="images/photos/WGI-experience/MCP23/MCP-image5.jpg" data-lightbox="WGI-experience-photos" data-title='Reunited with some friends from MidMichigan Impact | April 2, 2023' data-alt="5 young adults, all wearing purple shirts except the one in the middle who's wearing a yellow jumpsuit. All smiling with some thumbs up.">
                                 <img id="mcp23-image3" src="images/photos/WGI-experience/MCP23/MCP-image5.jpg" alt="5 young adults, all wearing purple shirts except the one in the middle who's wearing a yellow jumpsuit. All smiling with some thumbs up.">
@@ -238,7 +248,7 @@
                         I didn't fully realize how much I would be doing outside of rehearsal when I signed up. And don't get me wrong, I enjoyed it, I just wasn't fully aware what I was getting myself into. We had video assignments basically every week that we needed to turn in by Thursday night. Rehearsal itself was obviously a ton of work too. It was a huge workload that I wasn't completely prepared for, so it was definitely an adjustment.
                     </p>
                     <br>
-                    <div class="wrapper">
+                    <div class="wrapper" id="mcp23-image4-link">
                         <figure>
                             <a tabindex="0" href="images/photos/WGI-experience/MCP23/MCP-image6.jpg" data-lightbox="WGI-experience-photos" data-title='MCP 2023 Snareline at Friends and Family show | April 8, 2023' data-alt="7 young adults, all in yellow jumpsuits with right heels up and in a line with arms on each others' shoulders.">
                                 <img id="mcp23-image4" src="images/photos/WGI-experience/MCP23/MCP-image6.jpg" alt="7 young adults, all in yellow jumpsuits with right heels up and in a line with arms on each others' shoulders.">
@@ -311,7 +321,7 @@
                         Thank you, MCP, for an excellent year! I can't overstate how important this year was for me as a performer and person.
                     </p>
                     <br>
-                    <div class="wrapper">
+                    <div class="wrapper" id="mcp23-image5-link">
                         <figure>
                             <a tabindex="0" href="images/photos/WGI-experience/MCP23/MCP-image7.jpg" data-lightbox="WGI-experience-photos" data-title='MCP 2023 at WGI World Finals | April 22, 2023' data-alt="A large group of about 35-40 young adults with caution signs, buckets and mops, and other itmes saluting to the camera. They're in a large stadium wearing yellow jumpsuits and colorful, memphis style jerseys.">
                                 <img id="mcp23-image5" src="images/photos/WGI-experience/MCP23/MCP-image7.jpg" alt="A large group of about 35-40 young adults with caution signs, buckets and mops, and other itmes saluting to the camera. They're in a large stadium wearing yellow jumpsuits and colorful, memphis style jerseys.">
@@ -330,12 +340,12 @@
 
 
                     <br><br>
-                    <h2 tabindex="0" class="standout-h2">Motor City Percussion 2024<br>"Revealing Our Voice"</h2>
+                    <h2 tabindex="0" class="standout-h2" id="mcp24">Motor City Percussion 2024<br>"Revealing Our Voice"</h2>
                     <p tabindex="0">
                         Back for year 2! This fall was complicated--I ended up breaking my finger playing flag football in the Michigan Marching Band league I played in. So I wasn't able to really audition anywhere. I went back to Redline to make it clear I wanted to be there, but I wasn't abel to actually get anywhere with that audition. I still wanted to march indoor though, and I'm so thankful to the staff at MCP who gave me a spot even though I wasn't able to drum right away during the season.
                     </p>
                     <br>
-                    <div class="wrapper">
+                    <div class="wrapper" id="mcp24-image1-link">
                         <figure>
                             <a tabindex="0" href="iimages\photos\WGI-experience\MCP24\MCP24-image1.jpg" data-lightbox="WGI-experience-photos" data-title='The MCP 2024 Snareline. From left to right: Walker Weirts, Brandon Perez, Alex Hoffmann, Jonathan Yap, me, Christian Cole, Gabriel Fess, and Aaron McKay | January 21, 2024' data-alt="9 young adults standing in a line on top of white linoleum floor in a high school gym, hands in pockets and right legs crossed over, straight face">
                                 <img id="mcp24-image1" src="images\photos\WGI-experience\MCP24\MCP24-image1.jpg" alt="9 young adults standing in a line on top of white linoleum floor in a high school gym, hands in pockets and right legs crossed over, straight face">
@@ -365,7 +375,7 @@
                         I also tried to be as understanding and as helpful as possible. These are my friends that I'm talking to!
                     </p>
                     <br>
-                    <div class="wrapper">
+                    <div class="wrapper" id="mcp24-image2-link">
                         <figure>
                             <a tabindex="0" href="images\photos\WGI-experience\MCP24\MCP24-image2.jpg" data-lightbox="WGI-experience-photos" data-title='MCP 2024 battery at MCP Preview Show | February 3, 2024' data-alt="Block of snare drummers, tenors drummers, and bass drummers looking up to stands with sticks down by sides, wearing full black">
                                 <img id="mcp24-image2" src="images\photos\WGI-experience\MCP24\MCP24-image2.jpg" alt="Block of snare drummers, tenors drummers, and bass drummers looking up to stands with sticks down by sides, wearing full black">
@@ -382,7 +392,7 @@
                         This was the first snareline and battery I was super close with. And it was amazing. The friends I made during MCP 2024 are going to be there for the rest of my life. I actually miss a ton of people there super frequently, and I wish I could be drumming or marching with them again. I spent a lot of nights after rehearsal staying up super late, eating my friend Alex's parents' maostaccioli they made for us (bless them), and generally bonding with the people there, even more so than I did in 2023. The people truly defined this year of MCP and indoor in general for me. They made it awesome.
                     </p>
                     <br>
-                    <div class="wrapper">
+                    <div class="wrapper" id="mcp24-image3-link">
                         <figure>
                             <a tabindex="0" href="images\photos\WGI-experience\MCP24\MCP24-image3.jpg" data-lightbox="WGI-experience-photos" data-title='MCP 2024 snareline playing opener snare break at WGI White Lake Regional | March 2, 2024' data-alt="9 snare drummers leaning down over their drums in black and gray uniforms with splashes of color on top of similar floor design, with some other performers in the background and foreground">
                                 <img id="mcp24-image3" src="images\photos\WGI-experience\MCP24\MCP24-image3.jpg" alt="9 snare drummers leaning down over their drums in black and gray uniforms with splashes of color on top of similar floor design, with some other performers in the background and foreground">
@@ -399,7 +409,7 @@
                         I loved this season of indoor, truly. But afterwards, it also helped me realize that I was ready for a more intensive experience next season. That's just where I was at after the season ended in April.
                     </p>
                     <br>
-                    <div class="wrapper">
+                    <div class="wrapper" id="mcp24-image4-link">
                         <figure>
                             <a tabindex="0" href="images\photos\WGI-experience\MCP24\MCP24-image4.jpg" data-lightbox="WGI-experience-photos" data-title='Me in the warmup room before MAPA Lakeland | March 23, 2024' data-alt="Snare drummer wearing drum in colorful uniform looking straight ahead, determined. In a black and gray uniform with splashes of color">
                                 <img id="mcp24-image4" src="images\photos\WGI-experience\MCP24\MCP24-image4.jpg" alt="Snare drummer wearing drum in colorful uniform looking straight ahead, determined. In a black and gray uniform with splashes of color">
@@ -417,15 +427,17 @@
                         The show this year was called "Revealing Our Voice." The show followed soloists on non-drum musical instruments like an oboe, a saxophone, and a cello. The show was based around the song "Wonderwall" by Oasis, and that shows up in a lot of the voice samples and musical ideas throughout. We also built a special cello prop throughout the show, which was eventually revealed at the end in a really awesome moment--which the staff lovingly dubbed "Hello Cello" after our director, Aaron Swick, drew it up and sent it in a staff channel on our Slack workspace.
                     </p>
                     <br>
-                    <figure>
-                        <a tabindex="0" href="images\photos\WGI-experience\MCP24\MCP24-image5.jpg" data-lightbox="WGI-experience-photos" data-title='Hello Cello!' data-alt="Vector illustration of small yellow man with green hair and a cello, with a speech bubble that says 'hello cello'">
-                            <img id="mcp24-image5" src="images\photos\WGI-experience\MCP24\MCP24-image5.jpg" alt="Vector illustration of small yellow man with green hair and a cello, with a speech bubble that says 'hello cello'">
-                        </a>
-                        <i class="fa-solid fa-expand"></i>
-                        <figcaption>
-                            Hello Cello!
-                        </figcaption>
-                    </figure>
+                    <div class="wrapper" id="mcp24-image5-link">
+                        <figure>
+                            <a tabindex="0" href="images\photos\WGI-experience\MCP24\MCP24-image5.jpgg" data-lightbox="WGI-experience-photos" data-title='Hello Cello!' data-alt="Vector illustration of small yellow man with green hair and a cello, with a speech bubble that says 'hello cello'">
+                                <img id="mcp24-image5" src="images\photos\WGI-experience\MCP24\MCP24-image5.jpg" alt="Vector illustration of small yellow man with green hair and a cello, with a speech bubble that says 'hello cello'">
+                            </a>
+                            <i class="fa-solid fa-expand"></i>
+                            <figcaption>
+                                Hello Cello!
+                            </figcaption>
+                        </figure>
+                    </div>
                     <br>
                     <p tabindex="0">
                         This show was much more serious than previous years of MCP shows (<a href="https://youtu.be/l38_D-9wcIE?si=AJ4SoXMfb_qfQjK2">especially more so than 2022</a>), but I liked that. It put a little bit more emphasis on us, the members. We had to play our parts extremely well and march extremely well to be competitively successful. And overall, I thought we achieved it pretty well.
@@ -483,16 +495,17 @@
                         Thank you, MCP, for an excellent year! I can't overstate how important this year was for me as a performer and person.
                     </p>
                     <br>
-                    <div class="wrapper">
+                    <div class="wrapper" id="mcp24-image6-link">
                         <figure>
                             <a tabindex="0" href="images\photos\WGI-experience\MCP24\MCP24-image6.jpg" data-lightbox="WGI-experience-photos" data-title='MCP 2024 at WGI Open Class World Semi Finals | April 19, 2024' data-alt="Large group of 35-40 performers huddled up in a parking lot with keyboards in the foreground. They're wearing white and colorful jerseys similar to the uniforms above">
-                                <img id="mcp24-image5" src="images\photos\WGI-experience\MCP24\MCP24-image6.jpg" alt="Large group of 35-40 performers huddled up in a parking lot with keyboards in the foreground. They're wearing white and colorful jerseys similar to the uniforms above">
+                                <img id="mcp24-image6" src="images\photos\WGI-experience\MCP24\MCP24-image6.jpg" alt="Large group of 35-40 performers huddled up in a parking lot with keyboards in the foreground. They're wearing white and colorful jerseys similar to the uniforms above">
                             </a>
                             <i class="fa-solid fa-expand"></i>
                             <figcaption>
                                 MCP 2024 at WGI Open Class World Semi Finals | April 19, 2024
                             </figcaption>
                         </figure>
+                    </div>
 
                     <br><br>
                     <h2 tabindex="0" class="standout-h2">Final Thoughts</h2>
@@ -508,7 +521,7 @@
         </main>
         
         <footer>
-            <nav>
+            <nav aria-label="footer-nav">
                 <p>More Resources:</p>
                 <br>
                 <a tabindex="0" href="https://www.wgi.org/">Official WGI Website</a>
@@ -518,6 +531,12 @@
                 <a tabindex="0" href="https://www.wgi.org/start-here/">WGI "Start Here" Page</a>
                 <br>
                 <a tabindex="0" href="https://en.wikipedia.org/wiki/Winter_Guard_International">WGI Wikipedia Page</a>
+                <br><br><br>
+                Quick Links:<br>
+                        <a href="main-content" tabindex="0">Main Content</a><br>
+                        <a href="#impact22" tabindex="0">MidMichigan Impact 2022</a><br>
+                        <a href="#mcp23" tabindex="0">Motor City Percussion 2023</a><br>
+                        <a href="#mcp24" tabindex="0">Motor City Percussion 2024</a>
             </nav>
 
             <p>
@@ -531,5 +550,26 @@
         </footer>
     
         <script src="lightbox2-2.11.5\dist\js\lightbox-plus-jquery.js"></script>
+        <script>
+            // Get the button
+            let mybutton = document.getElementById("backToTop");
+            
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+        </script>
     </body>
 </html>

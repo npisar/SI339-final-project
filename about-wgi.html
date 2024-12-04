@@ -30,12 +30,14 @@
     </head>
 
     <body>
-        <a class="skip-link" href="#main" tabindex="0">Skip to main content</a>
+        <button onclick="topFunction()" id="backToTop" title="Back to Top">Back to Top</button>
         <header>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about-wgi.html">About WGI</a>
-                <a href="wgi-experience.html">WGI Experience</a>
+            <nav aria-label="header-nav">
+                <a href="index.html" tabindex="0">Home</a>
+                <a href="about-wgi.html" tabindex="0">About WGI</a>
+                <a href="wgi-experience.html" tabindex="0">WGI Experience</a>
+                <br>
+                <a class="skip-link" href="#main" tabindex="0">Skip to main content</a>
             </nav>
 
             <button class="color-scheme-toggle" onclick="colorSchemeToggle()" tabindex="0">Color Scheme Toggle</button>
@@ -102,17 +104,34 @@
                 </script>
         </header>
 
-        <main id="main">
+        <main>
             <section id="WGI-section" class="WGI-section">
                 <div>
                     <p tabindex="0" id="top-link" tabindex="0">Want to learn more about my specific experiences in WGI? <a href="wgi-experience.html">You can find that here</a>, or in the header underneath "WGI Experience"</p>
                     <br>
-                    <h2 tabindex="0" class="text-logo-grid standout-h2" tabindex="0">
+                    <p id="quick-links">
+                        Quick Links:<br>
+                        <a href="#desc-and-mission-statment" tabindex="0">Description and Mission Statement</a><br>
+                        <a href="#general-information" tabindex="0">General Information</a><br>
+                        <a href="#WGI-is-unique" tabindex="0">WGI is Unique</a><br>
+                        <a href="#a-deeper-look">A Deeper Look</a><br>
+                            <a href="#ensemble-classifcation" class="indented">Ensemble Classifcation</a><br>
+                            <a href="#competition" class="indented">WGI is Competitive</a><br>
+                            <a href="#instrumentation" class="indented">Instrumentation</a><br>
+                            <a href="#auditions-and-a-typical-season" class="indented">Auditions and a Typical Season</a><br>
+                            <a href="#why-rehearse" class="indented">Why Rehearse so Much?</a><br>
+                            <a href="#WGI-finals" class="indented">WGI Finals</a><br>
+                            <a href="#performance" class="indented">What a Performance Looks Like</a><br>
+                        <a href="#final-thoughts">Final Thoughts</a><br>
+                    </p>
+                        
+                    <br>
+                    <h2 tabindex="0" class="text-logo-grid standout-h2" tabindex="0" id="desc-and-mission-statment">
                         About Winter Guard International (WGI):
                         <br>Description and Mission Statement
                         <img class="WGI-logo" id="WGI-logo" src="images/logos/WGI-logo-black.svg" alt="WGI sport of the arts logo">
                     </h2>
-                    <p tabindex="0" >
+                    <p tabindex="0" id="main-content">
                         WGI Sport of the Arts is the world's premier organization producing indoor color guard, percussion, and winds competitions.  As a non-profit youth organization, WGI also serves as the governing body for the indoor color guard, percussion, and winds activities. It is called the Sport of the Arts because it brings music to life through performance in a competitive format. Even with over 45 years of history, the sport continues to evolve and grow. There were more than 40,000 participants at the regional level, and more than 12,000 participants at the Sport of the Arts World Championships this past April.
                         <br><br>
                     </p>
@@ -132,7 +151,7 @@
                         </figure>
                     </div>
                     
-                    <h2 tabindex="0" class="standout-h2">General Information</h2>
+                    <h2 tabindex="0" class="standout-h2" id="general-information">General Information</h2>
                     <p tabindex="0">
                         I would describe WGI as a mix of drumline, theater, competition, and sport. In short, it's drums in a gym.
                     </p>
@@ -143,7 +162,7 @@
                         Each performer truly is an athlete (hence "Sport of the Arts"). They have to train their bodies and minds to build the strength and fortitude to not only perform, but rehearse at an extremely high level.
                     </p>
                     <br><br>
-                    <h2 tabindex="0" class="standout-h2">WGI is Unique</h2>
+                    <h2 tabindex="0" class="standout-h2" id="WGI-is-unique">WGI is Unique</h2>
                     <p tabindex="0">
                         Performing in a WGI percussion ensemble is an especially unique and uncommon activity in a few ways.
                     </p>
@@ -175,10 +194,10 @@
                         ...the activity is community-driven and a true labor of love. It's full of people who give up their own time and resources to make experiences possible for their students.
                     </p>
                         <br><br>
-                    <h2 tabindex="0" class="standout-h2">A Deeper Look</h2>
+                    <h2 tabindex="0" class="standout-h2" id="a-deeper-look">A Deeper Look</h2>
                         <p tabindex="0">Let's take a closer look at what WGI is and what a season looks like.</p>
                         <br>
-                    <h3 tabindex="0" class="standout-h3">Ensemble Classifcation</h3>
+                    <h3 tabindex="0" class="standout-h3" id="ensemble-classifcation">Ensemble Classifcation</h3>
                         <p tabindex="0">
                             There are two main divisions of WGI percussion ensembles:
                         </p>
@@ -231,7 +250,7 @@
                             </figure>
                         </div>
                         <br><br>
-                    <h3 tabindex="0" class="standout-h3">Instrumentiation</h3>
+                    <h3 tabindex="0" class="standout-h3" id="instrumentation">Instrumentiation</h3>
                         <p tabindex="0">
                             A typical independent WGI group consists of roughly 15-25 battery percussionists playing marching snare drums, tenor drums, bass drums, and cymbals, 10-20 front ensemble members playing keyboard instruments, a drumset, accessory percussion, and electronics like synthesizers (all front ensemble are typically connected to speakers and amplified), and sometimes a visual ensemble who aim to add visual interest to the show or help move props around and don't typically play any instruments.
                         </p>
@@ -327,7 +346,7 @@
                         </figure>
                     </div>
                     <br><br>
-                    <h3 tabindex="0" class="standout-h3">Why Rehearse so Much?</h3>
+                    <h3 tabindex="0" class="standout-h3" id="why-rehearse">Why Rehearse so Much?</h3>
                         <p tabindex="0">
                             The goal of a WGI percussion ensemble is for every performer on the floor to perform their music and visual package as close to perfectly as possible. That's a tall order. The act of moving and playing an instrument on it's own is <em>hard</em>. The performers in WGI are typically marching around the floor at tempos of upwards of 180 beats per minutes, and playing music that takes years of dedicated work to even be able to perform standing still.
                         </p>
@@ -347,7 +366,7 @@
                             </figure>
                         </div>
                         <br><br>
-                    <h3 tabindex="0" class="standout-h3">WGI Finals</h3>
+                    <h3 tabindex="0" class="standout-h3" id="WGI-finals">WGI Finals</h3>
                         <p tabindex="0">
                             What are WGI Finals? In mid April every year, roughly 250 of the percussion groups from around the country--ranging from those ran out of high schools to independent groups run by nonprofit organizations--converge on Dayton, Ohio for the WGI Percussion World Championships, the final event of the year.
                         </p>
@@ -373,7 +392,7 @@
                             </figure>
                         </div>
                         <br><br>
-                    <h3 tabindex="0" class="standout-h3">What a Performance Looks Like</h3>
+                    <h3 tabindex="0" class="standout-h3" id="performance">What a Performance Looks Like</h3>
                         <p tabindex="0">
                             All of that rehearsal is to prepare for WGI finals. So: what does a performance there actually look like?
                         </p>
@@ -381,11 +400,18 @@
                             To give a quick synopsis of what shows look like: most groups will have a digitally-printed tarp, and some form of props. What a group does with their show is totally up to them, although WGI does have rules and regulations in place for performer safety and content guidelines. At a show, the group will roll their floor, all of their props, instruments, and electronics onto the floor in front of a timing line. When a judge gives a go, a 9 to 11 minute timer starts, depending on the classifcation of the ensemble. World Class shows can be up to 8 minutes long, with the remaining 3 of 11 minutes spent setting up and tearing down the entire operation so the next group can make it in and perform their show.
                         </p>
                         <p tabindex="0">
-                            Here are some videos of shows I've found influential, impactful, or otherwise awesome. They're a large part of the reason why I'm so invested in the activity today.
+                            Here are some videos of shows I've found influential, impactful, or otherwise awesome. They're a large part of the reason why I'm so invested in the activity today:
+                            <br><br>
+                            Rhythm X 2022 - "Art Shaped Box"
+                            <br>
+                            Dartmouth High School 2023 - "The Raven: From The Desk Of Edgar Allen Poe"
+                            <br>
+                            Music City Mystique 2017 - "The Hand of Man"
+                            <br>
+                            Rhythm X 2009 - "Touch"
                         </p>
                         <br>
                         <div class="ytgrid">
-                            <h4>Rhythm X 2022 - "Art Shaped Box"</h4>
                             <div class="wrapper" id="rhythmx22">
                                 <iframe tabindex="0"
                                     src="https://www.youtube.com/embed/llUtM-jI5Dw?si=w4zR3BFPU6Br6zWP"
@@ -396,7 +422,6 @@
                                     allowfullscreen>
                                 </iframe>
                             </div>
-                            <h4>Dartmouth 2023 - "The Raven: From The Desk Of Edgar Allen Poe"</h4>
                             <div class="wrapper" id="dartmouth23">
                                 <iframe tabindex="0"
                                     src="https://www.youtube.com/embed/KJTd9dSKwJM?si=QTYAWUbp7FuHPYai"
@@ -407,7 +432,6 @@
                                     allowfullscreen>
                                 </iframe>
                             </div>
-                            <h4>Music City Mystique 2017 - "The Hand of Man"</h4>
                             <div class="wrapper" id="mcm17">
                                 <iframe tabindex="0"
                                     src="https://www.youtube.com/embed/hVEVKz_SVrc?si=wO1JRWwPMmbZUIFo"
@@ -418,7 +442,6 @@
                                     allowfullscreen>
                                 </iframe>
                             </div>
-                            <h4>Rhythm X 2009 - "Touch"</h4>
                             <div class="wrapper" id="rhythmx09">
                                 <iframe tabindex="0"
                                     src="https://www.youtube.com/embed/ERP6zHLrJoE?si=UTJ2p1oLXwFsJWvQ"
@@ -449,7 +472,7 @@
                         <br>
                     
                         <br><br>
-                    <h2 tabindex="0" class="standout-h2">Final Thoughts</h2>
+                    <h2 tabindex="0" class="standout-h2" id="final-thoughts">Final Thoughts</h2>
                         <p tabindex="0">
                             WGI is an activity that's been extremely important to me over the last 3-4 years of my life. I was already getting into it watching shows online and warmup videos of drumlines I liked, but I loved it even more as soon as I started doing it myself. My appreciation for the activity and the people who I do it with is even greater than it was even a year ago at this point.
                         </p>
@@ -462,7 +485,7 @@
         </main>
         
         <footer>
-            <nav>
+            <nav aria-label="footer-nav">
                 <p>More Resources:</p>
                 <br>
                 <a tabindex="0" href="https://www.wgi.org/">Official WGI Website</a>
@@ -472,6 +495,20 @@
                 <a tabindex="0" href="https://www.wgi.org/start-here/">WGI "Start Here" Page</a>
                 <br>
                 <a tabindex="0" href="https://en.wikipedia.org/wiki/Winter_Guard_International">WGI Wikipedia Page</a>
+                <br><br><br>
+                Quick Links:<br>
+                        <a href="#desc-and-mission-statment" tabindex="0">Description and Mission Statement</a><br>
+                        <a href="#general-information" tabindex="0">General Information</a><br>
+                        <a href="#WGI-is-unique" tabindex="0">WGI is Unique</a><br>
+                        <a href="#a-deeper-look">A Deeper Look</a><br>
+                            <a href="#ensemble-classifcation" class="indented">Ensemble Classifcation</a><br>
+                            <a href="#competition" class="indented">WGI is Competitive</a><br>
+                            <a href="#instrumentation" class="indented">Instrumentation</a><br>
+                            <a href="#auditions-and-a-typical-season" class="indented">Auditions and a Typical Season</a><br>
+                            <a href="#why-rehearse" class="indented">Why Rehearse so Much?</a><br>
+                            <a href="#WGI-finals" class="indented">WGI Finals</a><br>
+                            <a href="#performance" class="indented">What a Performance Looks Like</a><br>
+                        <a href="#final-thoughts">Final Thoughts</a><br>
             </nav>
 
             <p>
@@ -485,5 +522,26 @@
         </footer>
     
         <script src="lightbox2-2.11.5\dist\js\lightbox-plus-jquery.js"></script>
+        <script>
+            // Get the button
+            let mybutton = document.getElementById("backToTop");
+            
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+        </script>
     </body>
 </html>

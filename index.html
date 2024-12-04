@@ -30,12 +30,14 @@
     </head>
 
     <body>
-        <a class="skip-link" href="#main" tabindex="0">Skip to main content</a>
+        <button onclick="topFunction()" id="backToTop" title="Back to Top">Back to Top</button>
         <header>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about-wgi.html">About WGI</a>
-                <a href="wgi-experience.html">WGI Experience</a>
+            <nav aria-label="header-nav">
+                <a href="index.html" tabindex="0">Home</a>
+                <a href="about-wgi.html" tabindex="0">About WGI</a>
+                <a href="wgi-experience.html" tabindex="0">WGI Experience</a>
+                <br>
+                <a class="skip-link" href="#main-content" tabindex="0">Skip to main content</a>
             </nav>
 
             <button class="color-scheme-toggle" onclick="colorSchemeToggle()" tabindex="0">Color Scheme Toggle</button>
@@ -101,66 +103,67 @@
                     });
                 </script>
         </header>
-
-        <div class="title-container">
-            <h1 class="title" id="rotating">What is Drum Corps?</h1>
-            <a tabindex="0" class="learn-more" href="#general-drum-information">Click here or scroll for answers ↓</a>
-        </div>
         
-        <h2>"Tell me about that <em>drum thing</em> you do"</h2>
-        
-        <div class="collage">
-            <img src="images\photos\index\image1.png" id=image1 alt="performing with WGI group MidMichigan Impact from 2022">
-            <img src="images\photos\index\image2.png" id="image2" alt="warming up with DCI group River City Rhythm from 2023">
-            <img src="images\photos\index\image3.png" id="image3" alt="performing with WGI group Motor City Percussion from 2023">
-            <img src="images\photos\index\image4.png" id="image4" alt="Motor City Percussion snareline with Michigan Alliance for Performing Arts Percussion Independent Open Champions banner from 2024">
-            <img src="images\photos\index\image5.png" id="image5" alt="River City Rhythm 2024 snareline">
-            <img src="images\photos\index\image6.png" id="image6" alt="Motor City Percussion 2023 snareline">
-            <img src="images\photos\index\image7.png" id="image7" alt="Motor City Percussion 2024 snareline">
-            <img src="images\photos\index\image8.png" id="image8" alt="Motor City Percussion members posing in front of River City Rhythm truck from 2024">
-            <img src="images\photos\index\image10.png" id="image9" alt="River City Rhythm 2024 battery in a circle, hands extended">
-            <img src="images\photos\index\image11.png" id="image10" alt="performing with Motor City Percussion from 2024">
-        </div>
-
-        <main id="main">            
+        <main>
+            <div class="title-container">
+                <h1 class="title" id="rotating">What is Drum Corps?</h1>
+                <a tabindex="0" class="learn-more" href="#general-drum-information">Click here or scroll for answers ↓</a>
+            </div>
+            
+            <h2>"Tell me about that <em>drum thing</em> you do"</h2>
+            
+            <div class="collage">
+                <img src="images\photos\index\image1.png" id=image1 alt="performing with WGI group MidMichigan Impact from 2022">
+                <img src="images\photos\index\image2.png" id="image2" alt="warming up with DCI group River City Rhythm from 2023">
+                <img src="images\photos\index\image3.png" id="image3" alt="performing with WGI group Motor City Percussion from 2023">
+                <img src="images\photos\index\image4.png" id="image4" alt="Motor City Percussion snareline with Michigan Alliance for Performing Arts Percussion Independent Open Champions banner from 2024">
+                <img src="images\photos\index\image5.png" id="image5" alt="River City Rhythm 2024 snareline">
+                <img src="images\photos\index\image6.png" id="image6" alt="Motor City Percussion 2023 snareline">
+                <img src="images\photos\index\image7.png" id="image7" alt="Motor City Percussion 2024 snareline">
+                <img src="images\photos\index\image8.png" id="image8" alt="Motor City Percussion members posing in front of River City Rhythm truck from 2024">
+                <img src="images\photos\index\image10.png" id="image9" alt="River City Rhythm 2024 battery in a circle, hands extended">
+                <img src="images\photos\index\image11.png" id="image10" alt="performing with Motor City Percussion from 2024">
+            </div>
+           
             <section id="general-drum-information" class="general-drum-information">    
-                <h2>It's really pretty simple.</h2>
-                <p>
+                <h2 tabindex="0" id="main-content">It's really pretty simple.</h2>
+                <p tabindex="0">
                     I've loved playing the snare drum since 5th grade, and specifically the marching snare drum since 7th grade. I've taken that passion to an extreme most people don't know exists.
-                    <br><br>
+                </p>
+                <p tabindex="0">
                     During the winter and summer, I rehearse and perform with <a href="#about-WGI">Winter Guard International (WGI)</a> and <a href="#about-DCI">Drum Corps International (DCI)</a> ensembles, respectively (pages about DCI coming soon!). In short, those are governing bodies that organize professional marching bands or indoor drumline ensembles scattered around the country.
-                    <br><br>
+                </p>
+                <p tabindex="0">
                     This website only covers how I got involved with WGI and the details about what the activity is (for now). Keep reading to learn about how I started drumming in the first place and how I found WGI. Or, click one of the links in the header to learn about how WGI works or my experience with it.
-                    <br><br>
                 </p>
 
             </section>
 
 
             <!-- Section 3: How I Started -->
-            <h2>How I Started Marching Drumming</h2>
+            <h2 tabindex="0">How I Started Marching Drumming</h2>
             <section class="how-I-started">
-                <p id="HIS-1">
+                <p tabindex="0" id="HIS-1">
                     Before I experienced anything musical through my schools, my parents enrolled me in piano lessons. That was really key for me-it got me involved with and excited about music super early on in my life. I took those lessons and got other general music lessons in elementary school until I eventually became old enough to choose an instrument for 5th grade band class. I started with a bell kit and small drumpad.
                 </p>
-                <p id="HIS-2">
+                <p tabindex="0" id="HIS-2">
                     As I continued in band class throughout middle school, I remember seeing a drum cam video by an alumni of my high school. He was playing through the school cadence series marching into the stadium, and I thought it was the coolest thing in the world. 
                 </p>
                 <div class="wrapper" id="HIS-3">
-                    <iframe src="https://www.youtube.com/embed/GMnLTxPDusg?si=wJOtmhojsNjMnSFw"
-                        title="YouTube video player"
+                    <iframe tabindex="0" src="https://www.youtube.com/embed/GMnLTxPDusg?si=wJOtmhojsNjMnSFw"
+                        title="YouTube video player" id="jeremy-wisler-cam"
                         frameborder="0"
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen>
                     </iframe>
                 </div>
-                <p id="HIS-4">
+                <p tabindex="0" id="HIS-4">
                     <em>"I want to do that,"</em> I remember thinking to myself. I started taking lessons with an instructor local to my area around the beginning of my eighth grade year. I worked extremely hard with him, probably harder than I had ever worked at something in my life. I wanted to make snare drum in the Dow High Drumline, and there were a lot of veteran members. I don't know what made me so interested in snare drum specifically; maybe it was the strange "traditional grip" used in the left hand, maybe it was that they were a always present high voice in the drumline sound. Regardless, after months of lessons and tons of hard work, it was time for the audition. And I got it! I made the snare line. I was also the only freshman to do so. You could say I felt pretty good about it, and I was definitely a little too cocky about it, especially considering what I know now about marching snare drumming!
                 </p>
                 <div class="wrapper" id="HIS-5">
                     <figure>
-                        <a href="images\photos\index\dowhigh2019markup.png" data-lightbox="index-photos" data-title='There I am! My first year playing in a marching ensemble! | Dow High School at Marching Band Showcase | October 16, 2019' data-alt="Marching band in white and green uniforms in large formation on football field at night, with a close up on the drumline">
+                        <a tabindex="0" href="images\photos\index\dowhigh2019markup.png" data-lightbox="index-photos" data-title='There I am! My first year playing in a marching ensemble! | Dow High School at Marching Band Showcase | October 16, 2019' data-alt="Marching band in white and green uniforms in large formation on football field at night, with a close up on the drumline">
                             <img id="dowhigh2019markup" src="images\photos\index\dowhigh2019markup.png" alt="Marching band in white and green uniforms in large formation on football field at night, with a close up on the drumline">
                         </a>
                         <i class="fa-solid fa-expand"></i>
@@ -169,23 +172,30 @@
                         </figcaption>
                     </figure>
                 </div>
-                <p id="HIS-6">
+                <p tabindex="0" id="HIS-6">
                     So that's how I started playing the marching snare drum. But how did I end up going from Dow High Marching Band to spending thousands of dollars and nearly all of my free time to wear goofy outfits, run around a gym or football field, and practice the snare drum every day?
                 </p>
             </section>
 
 
-            <!-- Section 4: Why I Do It -->
-            <section class="why-I-do-it" >
+
+
+
+
+
+
+
+
+            <section class="why-I-do-it">
                 <div class="slider">
                     <span id=slider1>
                         <img src="images/photos/index/mcp23lot.png" alt="marching snare drummers including Nick in colorful uniforms performing and playing their instruments in a parking lot">
                     </span>
                     <span id=slider2>
-                        <img src="images/photos/index/rcr23featureshot.png" alt="">
+                        <img src="images/photos/index/rcr23featureshot.png" alt="battery percussion mmebrs performing on a football field in blue and white uniforms, wearing drums">
                     </span>
                     <span id=slider3>
-                        <img src="images/photos/index/rcr24lot.jpg" alt="">
+                        <img src="images/photos/index/rcr24lot.jpg" alt="line of 9 snare drummers in white undershirst and pants playing while man in blue and black jersey stands in front of them">
                     </span>
                     <span id=slider4>
                         <img src="images/photos/index/mcp23wgisign.png" alt="marching snare drummers including Nick in colorful uniforms performing and playing their instruments in a parking lot">
@@ -194,67 +204,66 @@
                         <img src="images/photos/index/mcp23lot.png" alt="marching snare drummers including Nick in colorful uniforms performing and playing their instruments in a parking lot">
                     </span>
                     <span id=slider6>
-                        <img src="images/photos/index/rcr23featureshot.png" alt="">
+                        <img src="images/photos/index/rcr23featureshot.png" alt="battery percussion mmebrs performing on a football field in blue and white uniforms, wearing drums">
                     </span>
                     <span id=slider7>
-                        <img src="images/photos/index/rcr24lot.jpg" alt="">
+                        <img src="images/photos/index/rcr24lot.jpg" alt="line of 9 snare drummers in white undershirst and pants playing while man in blue and black jersey stands in front of them">
                     </span>
                     <span id=slider8>
                         <img src="images/photos/index/mcp23wgisign.png" alt="marching snare drummers including Nick in colorful uniforms performing and playing their instruments in a parking lot">
                     </span>
                 </div>
                 <div>
-                    <h2>Why I Do It</h2>
-                    <p>
-                        - Bruce motivated me to get better
-                        - I discovered drum corps
-                        - I discovered indoor through that
-                        - I loved drums and music from the day I picked them up
-                        - I always wanted to get better and do more with it
-
-                        - I do it now because of the people
-                        - It's extremely difficult and rewarding
-                        - Only a handful of people in the world are EXCELLENT at something
-                        - I've learned incredible life lessons and have changed for the better
-                        - It's truly my home-I feel so at home rehearsing and performing and practicing. I don't know where I would be without it.
+                    <h2 tabindex="0">Why I Do It</h2>
+                    <p tabindex="0">
+                        Why do I do this? Why do I care about drums so much? Why do I spend so much time working on this when it takes up my weekends?
                     </p>
-                    <h4>Video 1 Title</h4>
-                    <iframe
-                        src="https://www.youtube.com/embed/PLACEHOLDER"
-                        title="Video 1"
-                        allowfullscreen
-                    ></iframe>
-                    <h4>Video 2 Title</h4>
-                    <iframe
-                        src="https://www.youtube.com/embed/PLACEHOLDER"
-                        title="Video 2"
-                        allowfullscreen
-                    ></iframe>
-                    <h4>Video 3 Title</h4>
-                    <iframe
-                        src="https://www.youtube.com/embed/PLACEHOLDER"
-                        title="Video 3"
-                        allowfullscreen
-                    ></iframe>
+                    <p tabindex="0">
+                        I was always motivated to be a better musician. It's simply an inate drive I have. It's something I'm passionate about and love--it's as simple as that. I like long hours practicing. I like everything about it. I really started the grind of "getting good" during high school when my friend Bruce (who I was on the Dow High Drumline with) showed me a bunch of stuff about drum corps, the Michigan State Drumline (which he auditioned for and made), and when he was generally better than me. I wanted to drum better like he did.
+                    </p>
+                    <p tabindex="0">
+                        Like I said, I discovered indoor and drum corps through those early high school experiences. I kept watching, and I thought it was the coolest thing in the world. I wanted to do it.
+                    </p>
+                    <p tabindex="0">
+                        Why do I still do it, though? Well, I still love it. I love every part of it. I love driving to rehearsal with my friends. I love spending the night and complaining after a really tough day. I truly feel at home at rehearsals, performances, and anything related to either activity. I do it because of the people, the community. Everyone in the drumline world is so close to each other and, as a rule, wants each other to succeed. It's generally an extremely positive community focused on growth, education, and both self-improvement and group-improvement. I love the people who I've marched with in a special way. Regardless of whether we're best friends or not, I still have some form of love for everyone I've marched with.
+                    </p>
+                    <p tabindex="0">
+                        I still do it because I've learned a ton of valuable life lessons. I'm a better communicator. I react to tough situations better than I used to. I'm more willing or ready for things to change quickly and have to adjust. I'm a better leader. I'm a better listener. I know what it means to work on something for a long time, and for it to succeed. I know what it means to work on something for a long, and for it to not work out. There's a lot of things I didn't realize I was picking up on that have made their way into my daily life.
+                    </p>
+                    <p tabindex="0">
+                        And finally, I still do it because there are only a handful of people in the world who are trully <em>excellent</em> at something. That's something special. Not many people spend the 10,000 hours (or whatever arbitrary number you want to assign that it takes to master something). If I have the chance to be the <em>best in the world</em> at something, it would be insanely silly to pass up that chance or not put in the work.
+                    </p>
                 </div>
             </section>
-
-            <!-- Section 5: Other Drumming -->
-            <section class="other-drumming">
+        
+        
+        
+        
+            <section class="learn-more-section">
                 <div>
-                    <h2>Other Drumming</h2>
-                    <p>
-                        Placeholder text for other drumming activities and experiences.aaa
-                    </p>
+                    <h2 tabindex="0">Learn More</h2>
+                    <p tabindex="0">
+                        Now, you can learn more about WGI and my experience with it. Check them out in the header, or learn about either <a href="about-wgi.html">what WGI is</a> or <a href="wgi-experience.html">my personal WGI experience</a> at those links.
+                    </p>   
                 </div>
-                <div class="carousel">
-                    <img src="https://via.placeholder.com/300x200" alt="Carousel image 1" />
+                <br>
+                <div class="wrapper">
+                    <figure>
+                        <a tabindex="0" href="images\photos\index\image9.png" data-lightbox="WGI-experience-photos" data-title='Redline 2025 Snareline | October 20, 2024' data-alt="8 young men in a line with arms crossed over chest and fingers making finger guns in a gym">
+                            <img id="mcp24-image5" src="images\photos\index\image9.png" alt="8 young men in a line with arms crossed over chest and fingers making finger guns in a gym">
+                        </a>
+                        <i class="fa-solid fa-expand"></i>
+                        <figcaption>
+                            Redline 2025 Snareline | October 20, 2024
+                        </figcaption>
+                    </figure>
                 </div>
-            </section>
+                <br>    
+            </section>    
         </main>
 
         <footer>
-            <nav>
+            <nav aria-label="footer-nav">
                 <p>More Resources:</p>
                 <br>
                 <a tabindex="0" href="https://www.wgi.org/">Official WGI Website</a>
@@ -336,5 +345,26 @@
         </script>
     
         <script src="lightbox2-2.11.5\dist\js\lightbox-plus-jquery.js"></script>
+        <script>
+            // Get the button
+            let mybutton = document.getElementById("backToTop");
+            
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+        </script>
     </body>
 </html>
